@@ -15,3 +15,4 @@ export {default as Companies} from './landing/Companies';
 export {default as ArticleAnsNews} from './landing/ArticlesAndNews';
 export {default as ArticleCard} from './global/ArticleCard';
 export {default as BecomeAgent} from './landing/BecomeAgent';
+export {default as PopularRealEstate} from './landing/PopularRealEstate';

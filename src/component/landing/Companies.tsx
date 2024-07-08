@@ -14,9 +14,10 @@ const Companies = () => {
         Thousands of world’s leading companies trust Space
       </p>
       <div className="flex justify-between gap-4 my-8">
-        {companies.map((company) => {
+        {companies.map((company, index) => {
           return (
             <img
+              key={index}
               src={company}
               alt="company"
               className=" object-contain w-20 h-20"
