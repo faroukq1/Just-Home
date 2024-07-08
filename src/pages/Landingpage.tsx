@@ -4,6 +4,7 @@ import {
   PropertyPerCity,
   ChooseUs,
   BestProperty,
+  Testimonial,
 } from "../component";
 
 const Landingpage = () => {
@@ -14,6 +15,7 @@ const Landingpage = () => {
       <PropertyPerCity />
       <ChooseUs />
       <BestProperty />
+      <Testimonial />
     </main>
   );
 };

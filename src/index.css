@@ -7,6 +7,6 @@
     @apply mx-auto max-w-6xl px-8;
   }
   .custom-vh {
-    @apply h-[90vh];
+    @apply min-h-[90vh];
   }
 }
