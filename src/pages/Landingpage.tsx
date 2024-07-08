@@ -5,6 +5,7 @@ import {
   ChooseUs,
   BestProperty,
   Testimonial,
+  Review,
 } from "../component";
 
 const Landingpage = () => {
@@ -16,6 +17,7 @@ const Landingpage = () => {
       <ChooseUs />
       <BestProperty />
       <Testimonial />
+      <Review />
     </main>
   );
 };

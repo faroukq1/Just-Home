@@ -10,3 +10,4 @@ export {default as ChooseUs} from './landing/ChooseUs';
 export {default as SmallCard} from './landing/SmallCard';
 export {default as BestProperty} from './landing/BestProperty';
 export {default as Testimonial} from './landing/Testimonial';
+export {default as Review} from './landing/Review';
