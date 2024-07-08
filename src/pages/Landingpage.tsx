@@ -1,10 +1,19 @@
-import { RecomendedHomes, Hero } from "../component";
+import {
+  RecomendedHomes,
+  Hero,
+  PropertyPerCity,
+  ChooseUs,
+  BestProperty,
+} from "../component";
 
 const Landingpage = () => {
   return (
-    <main className="text-3xl">
+    <main>
       <Hero />
       <RecomendedHomes />
+      <PropertyPerCity />
+      <ChooseUs />
+      <BestProperty />
     </main>
   );
 };

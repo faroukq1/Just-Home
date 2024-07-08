@@ -1,4 +1,5 @@
 import image from "../../assets/heropicture.webp";
+
 import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {
@@ -11,10 +12,8 @@ const Hero = () => {
       }}
       className="h-screen flex flex-col items-center"
     >
-      <div className="box-border absolute w-[210.38px] h-[40px] top-[255px] border border-white rounded-full">
-        <h1 className="text-[13px] text-center text-white">
-          LET US GUIDE YOUR HOME
-        </h1>
+      <div className="absolute w-[210.38px] h-[40px] top-[255px] border border-white rounded-full flex justify-center items-center">
+        <h1 className="text-[13px] text-white">LET US GUIDE YOUR HOME</h1>
       </div>
       <h1 className="capitalize absolute h-[156px] top-[350px] text-center text-white font-bold text-4xl">
         discover a place you'll <br />
