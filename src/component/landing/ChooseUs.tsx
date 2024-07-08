@@ -42,7 +42,7 @@ const ChooseUs = () => {
   return (
     <div
       style={{ backgroundColor: "#E7C873" }}
-      className="rounded-lg mx-4 flex flex-col justify-center items-center"
+      className="h-[50vh] rounded-lg mx-4 flex flex-col justify-evenly items-center"
     >
       <PrintTitle
         title="why choose us"
