@@ -7,6 +7,7 @@ import {
   Testimonial,
   Review,
   Companies,
+  ArticleAnsNews,
 } from "../component";
 
 const Landingpage = () => {
@@ -20,6 +21,7 @@ const Landingpage = () => {
       <Testimonial />
       <Review />
       <Companies />
+      <ArticleAnsNews />
     </main>
   );
 };

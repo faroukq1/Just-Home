@@ -12,3 +12,5 @@ export {default as BestProperty} from './landing/BestProperty';
 export {default as Testimonial} from './landing/Testimonial';
 export {default as Review} from './landing/Review';
 export {default as Companies} from './landing/Companies';
+export {default as ArticleAnsNews} from './landing/ArticlesAndNews';
+export {default as ArticleCard} from './global/ArticleCard';
