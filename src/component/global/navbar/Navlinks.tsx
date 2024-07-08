@@ -43,7 +43,7 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
         return (
           <li key={index} className="btn btn-ghost">
             <Link
-              className="text-white text-sm font-semibold last:border-b-transparent"
+              className="text-white text-xs font-normal last:border-b-transparent"
               to={item}
             >
               {item}
