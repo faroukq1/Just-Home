@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const Review = () => {
   return (
-    <div className="flex align-element my-20">
+    <div className="flex align-element my-20 border-b border-b-neutral-200 pb-10">
       <div className="flex-1">
         <h1 className="text-3xl font-semibold leading-6 mb-8">
           what our customers are <br />

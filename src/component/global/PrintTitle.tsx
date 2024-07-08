@@ -8,7 +8,7 @@ const PrintTitle = ({
   return (
     <div className="my-10 text-center">
       <h1 className="text-3xl capitalize text-info-content">{title}</h1>
-      <p className="text-xs text-base-content mt-2">{subTitle}</p>
+      <p className="text-xs text-base-500 mt-2">{subTitle}</p>
     </div>
   );
 };
