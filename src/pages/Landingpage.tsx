@@ -8,6 +8,7 @@ import {
   Review,
   Companies,
   ArticleAnsNews,
+  BecomeAgent,
 } from "../component";
 
 const Landingpage = () => {
@@ -22,6 +23,7 @@ const Landingpage = () => {
       <Review />
       <Companies />
       <ArticleAnsNews />
+      <BecomeAgent />
     </main>
   );
 };

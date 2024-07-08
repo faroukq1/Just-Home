@@ -45,15 +45,17 @@ const articleList: articleListType[] = [
 
 const ArticlesAndNews = () => {
   return (
-    <div className="align-element my-32">
-      <PrintTitle
-        title="Recent articles & news"
-        subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, error?"
-      />
-      <div className="flex gap-4">
-        {articleList.map((item) => {
-          return <ArticleCard {...item} key={item.id} />;
-        })}
+    <div className="my-28 py-10 bg-secondary-content">
+      <div className="align-element">
+        <PrintTitle
+          title="Recent articles & news"
+          subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, error?"
+        />
+        <div className="flex gap-4">
+          {articleList.map((item) => {
+            return <ArticleCard {...item} key={item.id} />;
+          })}
+        </div>
       </div>
     </div>
   );
