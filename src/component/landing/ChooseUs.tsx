@@ -1,42 +1,6 @@
+import { smallCardContent } from "../../util/landingData";
 import PrintTitle from "../global/PrintTitle";
-import homelogo from "../../assets/homelogo.png";
-import homeandman from "../../assets/homeandman.png";
-import homemoney from "../../assets/homemoney.png";
-import homeprice from "../../assets/homeprice.png";
 import SmallCard from "./SmallCard";
-type smallCardContentType = {
-  id: number;
-  logo: string;
-  title: string;
-  subtitle: string;
-};
-const smallCardContent: smallCardContentType[] = [
-  {
-    id: 1,
-    logo: homelogo,
-    title: "find your future home",
-    subtitle:
-      "we help you find a new homeo by offering a small real estate experience",
-  },
-  {
-    id: 2,
-    logo: homeandman,
-    title: "experienced agents",
-    subtitle: "Find an experienced agent who knows your market best ",
-  },
-  {
-    id: 3,
-    logo: homemoney,
-    title: "Buy or rent homes",
-    subtitle: "Millions of houses and apartments in your favourite cities",
-  },
-  {
-    id: 4,
-    logo: homeprice,
-    title: "List your own property",
-    subtitle: "Sign up now and sell or rent your own properties",
-  },
-];
 
 const ChooseUs = () => {
   return (

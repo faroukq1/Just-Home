@@ -1,34 +1,7 @@
 import { Link } from "react-router-dom";
 import rentingpic from "../../assets/rentingpic.jpg";
 import { FaArrowRight } from "react-icons/fa6";
-
-type achievementType = {
-  id: number;
-  title: string;
-  subtitle: string;
-};
-const achievement: achievementType[] = [
-  {
-    id: 1,
-    title: "$18M",
-    subtitle: "Owned from properties transactions",
-  },
-  {
-    id: 2,
-    title: "26k",
-    subtitle: "properties for buy",
-  },
-  {
-    id: 3,
-    title: "15k",
-    subtitle: "propreties for sell",
-  },
-  {
-    id: 4,
-    title: "800",
-    subtitle: "daily completed transactions.",
-  },
-];
+import { achievement } from "../../util/landingData";
 
 const Testimonial = () => {
   return (
@@ -66,7 +39,7 @@ const Testimonial = () => {
 
       {/* TESTIMONIAL SECTION*/}
       <div className="grid grid-cols-1 items-center gap-16 sm:grid-cols-2 md:grid-cols-4 p-8 mt-4 align-element">
-        {achievement.map(({ id, title, subtitle }: achievementType) => {
+        {achievement.map(({ id, title, subtitle }) => {
           return (
             <div
               key={id}

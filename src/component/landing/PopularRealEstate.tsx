@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
 import PrintTitle from "../global/PrintTitle";
-
-const popularRealEstate: string[] = [
-  "The Villages, FL real estate",
-  "New York, Real estate",
-  "Madera, CA real estate",
-  "Fontana, CA real estate",
-  "Moreno Valley, CA real estate",
-  "Aurora, IL real estate",
-  "Perris, CA real estate",
-  "Minnesota Lake, MN real estate",
-  "Woodbridge, VA real estate",
-];
+import { popularRealEstate } from "../../util/landingData";
 
 const PopularRealEstate = () => {
   return (
