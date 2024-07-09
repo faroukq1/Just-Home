@@ -19,3 +19,10 @@ export type smallCardContentType = {
     title: string;
     subtitle: string;
   };
+
+type linksType = { id: number; title: string };
+export type footerContentType = {
+  id: number;
+  title: string;
+  links: linksType[];
+};

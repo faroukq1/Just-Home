@@ -2,7 +2,7 @@ import office from "../assets/office.png";
 import articlevilla from "../assets/articlevilla.png";
 import chair from "../assets/chair.png";
 import villatree from "../assets/villatree.png";
-import { achievementType, articleListType, smallCardContentType } from "./types";
+import { achievementType, articleListType, footerContentType, smallCardContentType } from "./types";
 import homelogo from "../assets/homelogo.png";
 import homeandman from "../assets/homeandman.png";
 import homemoney from "../assets/homemoney.png";
@@ -109,3 +109,50 @@ export const popularRealEstate: string[] = [
       subtitle: "daily completed transactions.",
     },
   ];
+
+  export const footerContent: footerContentType[] = [
+    {
+      id: 1,
+      title: "Discover",
+      links: [
+        { id: 11, title: "Miami" },
+        { id: 12, title: "New York" },
+        { id: 13, title: "Chicago" },
+        { id: 14, title: "Florida" },
+        { id: 15, title: "Los Angeles" },
+        { id: 16, title: "San Diego" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Quick Links",
+      links: [
+        { id: 21, title: "About" },
+        { id: 22, title: "Contact" },
+        { id: 23, title: "FAQ's" },
+        { id: 24, title: "Blog" },
+        { id: 25, title: "Pricing Plans" },
+        { id: 26, title: "Privacy Policy" },
+        { id: 27, title: "Terms & Conditions" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Contact Us",
+      links: [
+        { id: 31, title: "hi@justhome.com" },
+        { id: 32, title: "(123) 456-7890" },
+      ],
+    },
+    {
+      id: 4,
+      title: "Our Address",
+      links: [
+        {
+          id: 41,
+          title: "99 Fifth Avenue, 3rd Floor, San Francisco, CA 1980",
+        },
+      ],
+    },
+  ];
+  
