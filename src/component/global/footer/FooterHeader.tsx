@@ -1,35 +1,5 @@
 import logo from "../../../assets/logo.png";
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
-import { FaLinkedin } from "react-icons/fa";
-type iconsType = {
-  id: number;
-  link: string;
-  icon: JSX.Element;
-};
-const icons: iconsType[] = [
-  {
-    id: 1,
-    link: "facebook.com",
-    icon: <FaFacebook />,
-  },
-  {
-    id: 1,
-    link: "x.com",
-    icon: <FaTwitter />,
-  },
-  {
-    id: 1,
-    link: "instgram.com",
-    icon: <CiInstagram />,
-  },
-  {
-    id: 1,
-    link: "linkedin.com",
-    icon: <FaLinkedin />,
-  },
-];
+import { icons } from "../../../util/landingData";
 
 const FooterHeader = () => {
   return (
