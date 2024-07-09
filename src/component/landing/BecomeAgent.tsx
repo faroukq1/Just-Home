@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const BecomeAgent = () => {
   return (
-    <div className="align-element flex justify-between my-20">
+    <div className="align-element flex flex-col sm:flex-row gap-10 justify-between my-20">
       <div>
         <h1 className="text-2xl font-semibold mb-4">
           Become a Real Estate Agent

@@ -13,14 +13,14 @@ const Companies = () => {
       <p className="text-center text-sm text-neutral-500">
         Thousands of world’s leading companies trust Space
       </p>
-      <div className="flex justify-between gap-4 my-8">
+      <div className="flex flex-col items-center justify-between sm:flex-row gap-4 my-8">
         {companies.map((company, index) => {
           return (
             <img
               key={index}
               src={company}
               alt="company"
-              className=" object-contain w-20 h-20"
+              className=" object-contain w-40 h-40 sm:w-20 sm:h-20"
             />
           );
         })}

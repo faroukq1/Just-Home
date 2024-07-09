@@ -56,7 +56,7 @@ const footerContent: footerContentType[] = [
 
 const FooterContent = () => {
   return (
-    <div className="py-20 flex gap-4 border-b border-b-neutral-800">
+    <div className="py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-b border-b-neutral-800">
       {/*SUBSCRIBE SECTION */}
       <div className="mr-6">
         <p className="mb-4 font-semibold text-neutral-700">subscribe</p>
@@ -74,7 +74,7 @@ const FooterContent = () => {
         </p>
       </div>
       {/*LINKS SECTION */}
-      <div className="flex-1 flex justify-between gap-2">
+      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {footerContent.map(({ id, title, links }) => {
           return (
             <div key={id}>
@@ -97,8 +97,8 @@ const FooterContent = () => {
         })}
       </div>
       {/*DOWNLOAD SECTOIN */}
-      <div className="ml-6">
-        <p className="mb-4 font-semibold text-neutral-700">get the app</p>
+      <div className="flex flex-col items-end">
+        <p className="w-56 mb-4 font-semibold text-neutral-700">get the app</p>
         <img
           className="mt-2 w-56"
           src={downloadFromApple}

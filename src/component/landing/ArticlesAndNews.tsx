@@ -51,7 +51,7 @@ const ArticlesAndNews = () => {
           title="Recent articles & news"
           subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, error?"
         />
-        <div className="flex gap-4">
+        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row gap-6">
           {articleList.map((item) => {
             return <ArticleCard {...item} key={item.id} />;
           })}

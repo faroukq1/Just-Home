@@ -25,7 +25,7 @@ const ArticleCard = ({
         </p>
         <h2 className="text-lg font-semibold">{heading}</h2>
       </div>
-      <Link to="/" className="flex gap-4 btn btn-ghost ">
+      <Link to="/" className="flex gap-4 btn btn-ghost">
         read more{" "}
         <span>
           <FaArrowRight />
