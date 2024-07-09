@@ -16,3 +16,6 @@ export {default as ArticleAnsNews} from './landing/ArticlesAndNews';
 export {default as ArticleCard} from './global/ArticleCard';
 export {default as BecomeAgent} from './landing/BecomeAgent';
 export {default as PopularRealEstate} from './landing/PopularRealEstate';
+export {default as Footer} from './global/footer/Footer';
+export {default as FooterHeader} from './global/footer/FooterHeader';
+export {default as FooterContent} from './global/footer/FooterContent';
