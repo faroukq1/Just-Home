@@ -1,11 +1,4 @@
-import PrintTitle from "../global/PrintTitle";
-import amazon from "../../assets/amazon.png";
-import amd from "../../assets/amd.png";
-import cisco from "../../assets/disco.png";
-import dropcam from "../../assets/dropcam.png";
-import logitech from "../../assets/logitech.png";
-import spotify from "../../assets/spotify.png";
-const companies: string[] = [amazon, amd, cisco, dropcam, logitech, spotify];
+import { companies } from "../../util/landingData";
 
 const Companies = () => {
   return (

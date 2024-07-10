@@ -1,5 +1,4 @@
 import image from "../../assets/hero.png";
-
 import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {

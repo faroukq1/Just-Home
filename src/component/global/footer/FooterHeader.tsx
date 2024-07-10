@@ -1,4 +1,5 @@
 import logo from "../../../assets/logo.png";
+<<<<<<< HEAD
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
@@ -30,6 +31,9 @@ const icons: iconsType[] = [
     icon: <FaLinkedin />,
   },
 ];
+=======
+import { icons } from "../../../util/landingData";
+>>>>>>> 94777a155c246844600990d15b75a53c4a341e6a
 
 const FooterHeader = () => {
   return (
