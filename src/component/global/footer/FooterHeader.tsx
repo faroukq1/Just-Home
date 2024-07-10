@@ -15,17 +15,17 @@ const icons: iconsType[] = [
     icon: <FaFacebook />,
   },
   {
-    id: 1,
+    id: 2,
     link: "x.com",
     icon: <FaTwitter />,
   },
   {
-    id: 1,
+    id: 3,
     link: "instgram.com",
     icon: <CiInstagram />,
   },
   {
-    id: 1,
+    id: 4,
     link: "linkedin.com",
     icon: <FaLinkedin />,
   },
@@ -33,7 +33,7 @@ const icons: iconsType[] = [
 
 const FooterHeader = () => {
   return (
-    <div className="flex justify-between items-center py-20 border-b border-b-neutral-800">
+    <div className="flex flex-col sm:flex-row gap-10 justify-between items-center py-20 border-b border-b-neutral-800">
       <div className="flex items-center gap-4 btn btn-neutral btn-outline border-none">
         <img src={logo} alt="webste logo" className="w-12 h-12" />
         <h1 className="text-2xl text-white font-bold">JustHome</h1>

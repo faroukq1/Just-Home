@@ -74,16 +74,16 @@ const FooterContent = () => {
         </p>
       </div>
       {/*LINKS SECTION */}
-      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="flex-1 flex flex-wrap justify-between gap-10">
         {footerContent.map(({ id, title, links }) => {
           return (
-            <div key={id}>
-              <h3 className="font-semibold text-neutral-700">{title}</h3>
-              <ul className="mt-4 flex flex-col gap-4">
+            <div key={id} className="">
+              <h3 className="font-semibold text-neutral-700 text-start">{title}</h3>
+              <ul className="mt-4 flex items-center flex-wrap sm:flex-col gap-4">
                 {links.map(({ id, title }) => {
                   return (
                     <Link
-                      className="text-sm font-medium text-white"
+                      className="text-sm font-medium text-white text-start w-full"
                       to="/"
                       key={id}
                     >
