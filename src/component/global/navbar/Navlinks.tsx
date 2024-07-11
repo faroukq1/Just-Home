@@ -15,14 +15,13 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
         >
           {navlinks.map((item, index) => {
             return (
-              <li key={index}>
-                <Link
-                  className="p-3 mx-4 border-b border-b-slate-300 rounded-sm"
-                  to={item.toLocaleUpperCase()}
-                >
-                  {item}
-                </Link>
-              </li>
+              <Link
+                className="p-3 mx-4 border-b border-b-slate-300 rounded-sm"
+                to={item.toLocaleUpperCase()}
+                key={index}
+              >
+                {item}
+              </Link>
             );
           })}
         </ul>

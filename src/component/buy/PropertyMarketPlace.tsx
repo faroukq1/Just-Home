@@ -32,7 +32,7 @@ const PropertyMarketPlace = () => {
           >
             <FaThList />
           </button>
-          <select className="select select-bordered select-sm w-full max-w-xs">
+          <select className="select select-bordered select-sm select-success w-full">
             <option>Popular</option>
           </select>
         </div>

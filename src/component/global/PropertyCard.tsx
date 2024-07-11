@@ -6,7 +6,7 @@ import { MdOutlineSelectAll } from "react-icons/md";
 
 const PropertyCard = () => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
         <img src={image} alt="card image" />
       </figure>
@@ -14,7 +14,7 @@ const PropertyCard = () => {
         <h1 className="flex justify-between gap-2 text-lg text-accent-content">
           Skyper Pool Apartment <span className="text-error">$280,000</span>
         </h1>
-        <p className="flex items-center gap-4 text-sm font-light text-accent-content">
+        <p className="flex items-center gap-1 text-sm font-light text-accent-content">
           <CiLocationOn className="text-xl" />
           1020 Bloomigdale Ave
         </p>

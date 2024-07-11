@@ -26,7 +26,7 @@ const PropertyCardList = () => {
             450 sqft
           </span>
         </div>
-        <p className="text-sm leading-6 font-medium">
+        <p className="text-sm leading-6 font-light text-neutral-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
           nulla quo obcaecati dolorem sed sit ipsa perferendis debitis qui, quas
         </p>
