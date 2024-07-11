@@ -24,6 +24,8 @@ import { FaTwitter } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
 
+export const navlinks: string[] = ["Homes", "Buy", "Rent", "Blog", "Contact"];
+
 export const articleList: articleListType[] = [
   {
     id: 1,
@@ -180,17 +182,17 @@ export const icons: iconsType[] = [
     icon: <FaFacebook />,
   },
   {
-    id: 1,
+    id: 2,
     link: "x.com",
     icon: <FaTwitter />,
   },
   {
-    id: 1,
+    id: 3,
     link: "instgram.com",
     icon: <CiInstagram />,
   },
   {
-    id: 1,
+    id: 4,
     link: "linkedin.com",
     icon: <FaLinkedin />,
   },

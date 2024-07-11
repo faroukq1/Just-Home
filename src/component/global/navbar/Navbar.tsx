@@ -5,10 +5,13 @@ import Navlinks from "./Navlinks";
 const Navbar = () => {
   return (
     <nav className="fixed z-10 py-2 px-2 sm:px-16 lg:px-20 flex gap-2 justify-between items-center bg-neutral w-full shadow ">
-      <div className="flex items-center gap-2 btn btn-neutral btn-outline border-none">
+      <Link
+        to="/"
+        className="flex items-center gap-2 btn btn-neutral btn-outline border-none"
+      >
         <img src={logo} alt="webste logo" className="w-6 h-6" />
         <h1 className="text-md text-white font-bold">JustHome</h1>
-      </div>
+      </Link>
       <Navlinks />
       <div className="hidden md:flex">
         <Link

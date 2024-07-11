@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Homelayout, Landingpage } from "./pages";
+import { BuyProperty, Homelayout, Landingpage } from "./pages";
 import { Erorr } from "./component";
 
 const router = createBrowserRouter([
@@ -11,6 +11,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landingpage />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "/buy",
+        element: <BuyProperty />,
         errorElement: <Erorr />,
       },
     ],

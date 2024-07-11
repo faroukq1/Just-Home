@@ -1,14 +1,6 @@
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
-const navlinks: string[] = [
-  "Home",
-  "Listing",
-  "Members",
-  "Blog",
-  "Pages",
-  "Contact",
-];
+import { navlinks } from "../../../util/landingData";
 
 const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
   if (dropdown) {
@@ -26,7 +18,7 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
               <li key={index}>
                 <Link
                   className="p-3 mx-4 border-b border-b-slate-300 rounded-sm"
-                  to={item}
+                  to={item.toLocaleUpperCase()}
                 >
                   {item}
                 </Link>

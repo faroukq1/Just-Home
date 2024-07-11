@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns : {
+        'auto-1fr' : 'auto 1fr',
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
