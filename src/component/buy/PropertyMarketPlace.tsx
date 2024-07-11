@@ -1,8 +1,13 @@
 import { BsGrid1X2Fill } from "react-icons/bs";
 import { FaThList } from "react-icons/fa";
 import PropertyCard from "../global/PropertyCard";
+import { useState } from "react";
+import PropertyCardList from "../global/PropertyCardList";
 
 const PropertyMarketPlace = () => {
+  const [view, setView] = useState("grid");
+  const makeItGrid = () => setView("grid");
+  const makeItList = () => setView("list");
   return (
     <div className="py-4 overflow-auto max-h-[85vh]">
       <div className="w-full h-fit py-6 px-2 flex justify-between">
@@ -10,10 +15,21 @@ const PropertyMarketPlace = () => {
           result : 45 property founds
         </h1>
         <div className="flex items-center gap-5">
-          <button className="btn btn-success btn-sm btn-circle btn-active">
+          <button
+            onClick={makeItGrid}
+            className={`btn ${
+              view === "grid" ? "btn-success" : "btn-ghost"
+            } btn-sm btn-circle btn-active`}
+          >
             <BsGrid1X2Fill className="text-white" />
           </button>
-          <button className="btn btn-ghost btn-sm btn-circle">
+
+          <button
+            onClick={makeItList}
+            className={`btn btn-sm ${
+              view === "list" ? "btn-success" : "btn-ghost"
+            } btn-circle`}
+          >
             <FaThList />
           </button>
           <select className="select select-bordered select-sm w-full max-w-xs">
@@ -23,7 +39,11 @@ const PropertyMarketPlace = () => {
       </div>
       <div className="flex flex-wrap justify-center items-center gap-4">
         {Array.from({ length: 10 }, (_, index) => {
-          return <PropertyCard key={index} />;
+          return view === "grid" ? (
+            <PropertyCard key={index} />
+          ) : (
+            <PropertyCardList key={index} />
+          );
         })}
       </div>
     </div>

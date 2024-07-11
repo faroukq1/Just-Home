@@ -27,3 +27,4 @@ export { default as CustomInputNumber } from "./global/CustomInputNumber";
 export { default as RoomFilter } from "./buy/filter/RoomsFilter";
 export { default as RentPeriod } from "./buy/filter/RentPeriod";
 export { default as PropertyMarketPlace } from "./buy/PropertyMarketPlace";
+export { default as PropertyCardList } from "./global/PropertyCardList";

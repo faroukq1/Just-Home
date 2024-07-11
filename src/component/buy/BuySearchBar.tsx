@@ -2,7 +2,7 @@ import { IoIosSearch } from "react-icons/io";
 
 const BuySearchBar = () => {
   return (
-    <div className="flex flex-wrap md:flex-nowrap gap-4">
+    <div className="flex flex-wrap md:flex-nowrap gap-4 mb-2">
       <label className="input input-bordered flex flex-row-reverse items-center gap-3 w-full">
         <input
           type="text"
