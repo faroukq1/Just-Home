@@ -8,7 +8,7 @@ import {
 
 const BuyFilter = () => {
   return (
-    <aside className="py-2">
+    <aside className="py-2 hidden xl:block">
       <FilterHeader />
       <ProperyTypeFilter />
       <div className="flex gap-4 mt-4">

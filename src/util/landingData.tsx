@@ -1,7 +1,3 @@
-import office from "../assets/office.png";
-import articlevilla from "../assets/articlevilla.png";
-import chair from "../assets/chair.png";
-import villatree from "../assets/villatree.png";
 import {
   achievementType,
   articleListType,
@@ -23,8 +19,12 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
+import office from "../assets/office.png";
+import articlevilla from "../assets/articlevilla.png";
+import chair from "../assets/chair.png";
+import villatree from "../assets/villatree.png";
 
-export const navlinks: string[] = ["Homes", "Buy", "Rent", "Blog", "Contact"];
+export const navlinks: string[] = ["Buy", "Rent", "Blog", "Contact"];
 
 export const articleList: articleListType[] = [
   {
@@ -48,6 +48,7 @@ export const articleList: articleListType[] = [
     date: "  March 19, 2024",
     heading: "10 Walkable Cities Where You Can Live Affordably",
   },
+
   {
     id: 4,
     image: villatree,

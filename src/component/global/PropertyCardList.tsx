@@ -5,15 +5,19 @@ import { MdOutlineSelectAll } from "react-icons/md";
 
 const PropertyCardList = () => {
   return (
-    <div className="grid grid-cols-2 p-2 shadow-md bg-neutral-50">
+    <div className="grid md:grid-cols-2 p-2 shadow-md bg-neutral-50">
       <div className="flex justify-center items-center">
-        <img src={image} alt="image" className="h-[90%] w-[90%] rounded-md" />
+        <img
+          src={image}
+          alt="image"
+          className="h-[90%] w-[100%] rounded-md mr-5"
+        />
       </div>
-      <div>
+      <div className="flex flex-col justify-center">
         <h3 className="text-xl tracking-wide font-medium">
           card title example
         </h3>
-        <p className="text-neutral-400 text-sm mb-3">card description</p>
+        <p className="text-neutwral-400 text-sm mb-3">card description</p>
         <div className="flex gap-4 my-4">
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
             <TbBed />4 beds
@@ -27,9 +31,14 @@ const PropertyCardList = () => {
           </span>
         </div>
         <p className="text-sm leading-6 font-light text-neutral-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-          nulla quo obcaecati dolorem sed sit ipsa perferendis debitis qui, quas
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam porro
+          exercitationem, dolores odit minima sapiente ratione blanditiis iure
+          quaerat praesentium voluptatum sequi quod eum quisquam voluptates
+          animi? Numquam quod delectus nisi corporis, explicabo perferendis
+          libero fugit laboriosam doloribus, eveniet molestiae fuga? Aliquam
+          consectetur nam impedit adipisci aliquid? Voluptatem, impedit officia.
         </p>
+
         <div className="mt-2">
           <h3 className="tracking-wide text-neutral-500 mb-2">more image</h3>
           <div className="flex gap-2">

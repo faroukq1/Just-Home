@@ -9,7 +9,10 @@ const PropertyMarketPlace = () => {
   const makeItGrid = () => setView("grid");
   const makeItList = () => setView("list");
   return (
-    <div className="py-4 overflow-auto max-h-[85vh]">
+    <div
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      className="py-4 overflow-auto max-h-[85vh]"
+    >
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="text-neutral-700 font-medium tracking-wide">
           result : 45 property founds
