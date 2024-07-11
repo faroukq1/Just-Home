@@ -17,6 +17,12 @@ const BuyFilter = () => {
       </div>
       <RoomFilter />
       <RentPeriod />
+      <button
+        type="button"
+        className="mt-4 btn btn-success btn-wide text-white text-2xl font-normal tracking-wide capitalize"
+      >
+        filter
+      </button>
     </aside>
   );
 };

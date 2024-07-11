@@ -12,8 +12,8 @@ const PropertyTypeFilter = () => {
       <div>
         {propertyTypes.map((item, index) => {
           return (
-            <div className="flex items-center gap-4 w-full mt-2">
-              <input key={index} type="checkbox" className="checkbox" />
+            <div key={index} className="flex items-center gap-4 w-full mt-2">
+              <input type="checkbox" className="checkbox" />
               <p>{item}</p>
             </div>
           );

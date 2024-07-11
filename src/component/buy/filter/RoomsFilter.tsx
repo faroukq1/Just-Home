@@ -8,8 +8,8 @@ const RoomsFilter = () => {
         {Array.from({ length: 4 }, (_, i) => {
           const index = i + 1;
           return (
-            <div className="flex items-center gap-4 w-full mt-2">
-              <input key={index} type="checkbox" className="checkbox" />
+            <div key={index} className="flex items-center gap-4 w-full mt-2">
+              <input type="checkbox" className="checkbox" />
               <p>
                 {index} room{i > 1 && "s"}
               </p>
