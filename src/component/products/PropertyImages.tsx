@@ -5,27 +5,27 @@ import hotel4 from "../../assets/modernhotel4.webp";
 const PropertyImages = () => {
   return (
     <div className="flex gap-4 h-[46%]">
-      <div className="flex-1">
+      <div>
         <img
           src={hotel1}
           alt="hotel2"
-          className="object-cover w-full h-full rounded-l-[3rem]"
+          className="object-cover w-full h-full rounded-l-[1rem]"
         />
       </div>
       <div style={{ flexGrow: "0.15" }} className="flex flex-col gap-2 h-full">
         <img
           src={hotel2}
           alt="hotel2"
-          className="object-cover w-full h-1/3 rounded-tr-[3rem]"
+          className="object-cover w-full h-1/3 rounded-tr-[1rem]"
         />
         <img src={hotel3} alt="hotel2" className="object-cover  h-1/3" />
         <div className="w-full h-1/3 relative">
           <img
             src={hotel4}
             alt="hotel4"
-            className="w-full h-full object-cover rounded-br-[3rem]"
+            className="w-full h-full object-cover rounded-br-[1rem]"
           />
-          <div className="bg-white opacity-80 w-full h-full absolute z-[10] rounded-br-[3rem] top-0 right-0 flex justify-center items-center">
+          <div className="bg-white opacity-80 w-full h-full absolute z-[10] rounded-br-[1rem] top-0 right-0 flex justify-center items-center">
             <p className="capitalize text-neutral-800 text-xl tracking-wide">
               +12 photo
             </p>

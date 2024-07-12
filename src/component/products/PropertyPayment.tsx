@@ -60,8 +60,8 @@ const PropertyPayment = () => {
           <span className="btn btn-disabled">Oct7. 2023</span>
         </div>
         <div className="grid gap-4 flex-1">
-          <h3 className="text-lg text-neutral-500">Check-In</h3>
-          <span className="btn btn-disabled">Oct7. 2023</span>
+          <h3 className="text-lg text-neutral-500">Check-Out</h3>
+          <span className="btn btn-disabled">Oct12. 2023</span>
         </div>
       </div>
       <div></div>
@@ -104,7 +104,7 @@ const PropertyPayment = () => {
       </div>
       <div className="mt-4">
         <h3 className="flex justify-between items-center text-neutral-500">
-          Total Payment{" "}
+          Total Payment
           <span className="font-bold text-xl text-black">$316</span>
         </h3>
         <button
