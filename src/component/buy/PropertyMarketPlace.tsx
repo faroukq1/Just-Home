@@ -11,7 +11,7 @@ const PropertyMarketPlace = () => {
   return (
     <div
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      className="py-4 overflow-auto max-h-[85vh]"
+      className="overflow-auto max-h-[80vh]"
     >
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="text-neutral-700 font-medium tracking-wide">

@@ -29,3 +29,5 @@ export { default as RentPeriod } from "./buy/filter/RentPeriod";
 export { default as PropertyMarketPlace } from "./buy/PropertyMarketPlace";
 export { default as PropertyCardList } from "./global/PropertyCardList";
 export { default as SmallScreenFilter } from "./buy/SmallScreenFilter";
+export { default as PropertyDetails } from "./product/PropertyDetails";
+export { default as PropertyPayment } from "./product/PropertyPayment";

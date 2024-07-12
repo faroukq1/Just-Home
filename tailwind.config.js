@@ -9,6 +9,9 @@ export default {
       gridTemplateColumns : {
         'auto-1fr' : 'auto 1fr',
       },
+      gridTemplateColumns : {
+        "1fr-auto" : "1fr auto",
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
