@@ -8,7 +8,7 @@ const PropertyDescription = () => {
   return (
     <div>
       <div className="my-6 flex flex-col gap-4">
-        <h1 className="text-4xl">Maxone Ascent Hotetl Luxury Kota Malang</h1>
+        <h1 className="text-4xl">Maxone Ascent Hotel Luxury Kota Malang</h1>
         <p className="text-lg text-neutral-500">
           JIn. Diaponegoro V No. 12, Kec, Lowokwaru, Kota Malang
         </p>
