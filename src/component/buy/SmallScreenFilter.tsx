@@ -1,3 +1,5 @@
+import { GiSettingsKnobs } from "react-icons/gi";
+
 const SmallScreenFilter = () => {
   const displayModal = () => {
     const dialog = document.getElementById("modal_1") as HTMLDialogElement;
@@ -9,9 +11,9 @@ const SmallScreenFilter = () => {
       <button
         onClick={displayModal}
         type="button"
-        className="btn w-full btn-success font-medium text-xl tracking-widest text-white"
+        className="btn btn-neutral tracking-widest text-white"
       >
-        Filter
+        <GiSettingsKnobs className="text-2xl" />
       </button>
       <dialog id="modal_1" className="modal">
         <div className="modal-box">
