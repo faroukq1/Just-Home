@@ -24,7 +24,7 @@ import articlevilla from "../assets/articlevilla.png";
 import chair from "../assets/chair.png";
 import villatree from "../assets/villatree.png";
 
-export const navlinks: string[] = ["Properties", "Blog", "Contact"];
+export const navlinks: string[] = ["Properties", "Blog", "Contact", "About"];
 
 export const articleList: articleListType[] = [
   {
