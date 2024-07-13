@@ -32,14 +32,13 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
     <ul className="hidden md:flex gap-3 items-center">
       {navlinks.map((item, index) => {
         return (
-          <li key={index} className="btn btn-ghost">
-            <Link
-              className="text-white text-xs font-normal last:border-b-transparent"
-              to={item.toLocaleLowerCase()}
-            >
-              {item}
-            </Link>
-          </li>
+          <Link
+            to={item.toLocaleLowerCase()}
+            key={index}
+            className="btn btn-ghost hover:bg-neutral-800 text-white btn-sm text-xs font-normal"
+          >
+            {item}
+          </Link>
         );
       })}
     </ul>
