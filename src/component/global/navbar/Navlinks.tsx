@@ -35,7 +35,7 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
           <li key={index} className="btn btn-ghost">
             <Link
               className="text-white text-xs font-normal last:border-b-transparent"
-              to={item}
+              to={item.toLocaleLowerCase()}
             >
               {item}
             </Link>

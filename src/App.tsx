@@ -1,5 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { BuyProperty, Homelayout, Landingpage, PropertyInfo } from "./pages";
+import {
+  BuyProperty,
+  Contact,
+  Homelayout,
+  Landingpage,
+  PropertyInfo,
+} from "./pages";
 import { Erorr } from "./component";
 
 const router = createBrowserRouter([
@@ -21,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: "/property",
         element: <PropertyInfo />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
         errorElement: <Erorr />,
       },
     ],
