@@ -1,4 +1,4 @@
-import ArticleBlogCard from "../component/blog/ArticleBlogCard";
+import { ArticleBlogCard } from "../component";
 
 const Blog = () => {
   return (

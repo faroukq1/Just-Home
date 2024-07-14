@@ -34,3 +34,4 @@ export { default as PropertyPayment } from "./products/PropertyPayment";
 export { default as PropertyBadges } from "./products/PropertyBadges";
 export { default as PropertyDescription } from "./products/PropertyDescription";
 export { default as PropertyImages } from "./products/PropertyImages";
+export { default as ArticleBlogCard } from "./blog/ArticleBlogCard";
