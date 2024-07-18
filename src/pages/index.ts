@@ -5,3 +5,4 @@ export { default as PropertyInfo } from "./PropertyInfo";
 export { default as Contact } from "./Contact";
 export { default as Blog } from "./Blog";
 export { default as About } from "./About";
+export { default as ProfilePage } from "./ProfilePage";

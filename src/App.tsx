@@ -6,6 +6,7 @@ import {
   Contact,
   Homelayout,
   Landingpage,
+  ProfilePage,
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
         errorElement: <Erorr />,
       },
     ],

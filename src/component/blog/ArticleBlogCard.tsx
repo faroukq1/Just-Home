@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import travel1 from "../../assets/travel1.jpg";
 import travel2 from "../../assets/travel2.webp";
 import travel3 from "../../assets/travel3.jpeg";
@@ -7,11 +8,13 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
     <>
       <div className={`flex gap-4 px-4 h-80 ${reverse && "flex-row-reverse"}`}>
         <div className="relative w-[65%]">
-          <img
-            className="object-cover rounded-lg h-full w-full"
-            src={travel1}
-            alt="travel1"
-          />
+          <Link to="/">
+            <img
+              className="object-cover rounded-lg h-full w-full"
+              src={travel1}
+              alt="travel1"
+            />
+          </Link>
           <p className="absolute top-10 left-10 text-lg text-neutral-200 font-bold">
             <span className="text-neutral-300 font-normal">Distination</span>{" "}
             <br />
@@ -19,11 +22,13 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
           </p>
         </div>
         <div className="relative w-[35%]">
-          <img
-            className="object-cover rounded-lg h-full w-full"
-            src={travel2}
-            alt="travel2"
-          />
+          <Link to="/">
+            <img
+              className="object-cover rounded-lg h-full w-full"
+              src={travel2}
+              alt="travel2"
+            />
+          </Link>
           <p className="absolute top-10 left-10 text-lg text-neutral-200 font-bold">
             <span className="text-neutral-300 font-normal">Distination</span>
             <br />
@@ -34,11 +39,13 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
 
       <div className="flex gap-4 px-4 mt-4 h-80">
         <div className="relative">
-          <img
-            className="object-cover rounded-lg h-full w-full"
-            src={travel4}
-            alt="travel1"
-          />
+          <Link to="/">
+            <img
+              className="object-cover rounded-lg h-full w-full"
+              src={travel4}
+              alt="travel1"
+            />
+          </Link>
           <p className="absolute top-10 left-10 text-lg text-neutral-200 font-bold">
             <span className="text-neutral-300 font-normal">Distination</span>{" "}
             <br />
@@ -47,11 +54,13 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
         </div>
 
         <div className="relative">
-          <img
-            className="object-cover rounded-lg h-full w-full"
-            src={travel2}
-            alt="travel1"
-          />
+          <Link to="/">
+            <img
+              className="object-cover rounded-lg h-full w-full"
+              src={travel2}
+              alt="travel1"
+            />
+          </Link>
           <p className="absolute top-10 left-10 text-lg text-neutral-200 font-bold">
             <span className="text-neutral-300 font-normal">Distination</span>{" "}
             <br />
@@ -59,11 +68,13 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
           </p>
         </div>
         <div className="relative">
-          <img
-            className="object-cover rounded-lg h-full w-full"
-            src={travel3}
-            alt="travel1"
-          />
+          <Link to="/">
+            <img
+              className="object-cover rounded-lg h-full w-full"
+              src={travel3}
+              alt="travel1"
+            />
+          </Link>
           <p className="absolute top-10 left-10 text-lg text-neutral-200 font-bold">
             <span className="text-neutral-300 font-normal">Distination</span>{" "}
             <br />
