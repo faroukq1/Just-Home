@@ -25,7 +25,7 @@ const PropertyImages = () => {
             alt="hotel4"
             className="w-full h-full object-cover rounded-br-[1rem]"
           />
-          <div className="bg-white opacity-80 w-full h-full absolute z-[10] rounded-br-[1rem] top-0 right-0 flex justify-center items-center">
+          <div className="bg-white opacity-80 w-full h-full absolute z-[0] rounded-br-[1rem] top-0 right-0 flex justify-center items-center">
             <p className="capitalize text-neutral-800 text-xl tracking-wide">
               +12 photo
             </p>
