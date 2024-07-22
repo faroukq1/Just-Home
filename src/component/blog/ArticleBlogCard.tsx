@@ -8,7 +8,7 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
     <>
       <div className={`flex gap-4 px-4 h-80 ${reverse && "flex-row-reverse"}`}>
         <div className="relative w-[65%]">
-          <Link to="/">
+          <Link to="/article/1">
             <img
               className="object-cover rounded-lg h-full w-full"
               src={travel1}
@@ -22,7 +22,7 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
           </p>
         </div>
         <div className="relative w-[35%]">
-          <Link to="/">
+          <Link to="/article/2">
             <img
               className="object-cover rounded-lg h-full w-full"
               src={travel2}
@@ -39,7 +39,7 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
 
       <div className="flex gap-4 px-4 mt-4 h-80">
         <div className="relative">
-          <Link to="/">
+          <Link to="/article/3">
             <img
               className="object-cover rounded-lg h-full w-full"
               src={travel4}
@@ -54,7 +54,7 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
         </div>
 
         <div className="relative">
-          <Link to="/">
+          <Link to="/article/4">
             <img
               className="object-cover rounded-lg h-full w-full"
               src={travel2}
@@ -68,7 +68,7 @@ const ArticleBlogCard = ({ reverse }: { reverse?: boolean }) => {
           </p>
         </div>
         <div className="relative">
-          <Link to="/">
+          <Link to="/article/5">
             <img
               className="object-cover rounded-lg h-full w-full"
               src={travel3}
