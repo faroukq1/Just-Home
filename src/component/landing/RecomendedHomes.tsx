@@ -18,7 +18,7 @@ const RecomendedHomes = () => {
       <div className="flex gap-4 flex-wrap justify-center md:flex-nowrap">
         {data.map((item: any, index: number) => {
           const image: string =
-            data[0].attributes.images.data[0].attributes.url;
+            data[0].attributes.images.data[1].attributes.url;
           console.log(image);
           const {
             title,
