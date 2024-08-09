@@ -164,3 +164,11 @@ provide only the attrubute you want to change
 - **Filters and Sorting:** The query syntax can vary slightly depending on your Strapi version and the database you're using. Ensure that the syntax aligns with your Strapi version.
 - **Field Names:** Replace field names like `category`, `price`, and `createdAt` with the actual names defined in your Strapi content type schema.
 
+
+
+####################
+landing page end points
+####################
+
+1- features product
+http://localhost:1337/api/properties?filters[featured][$eq]=true
