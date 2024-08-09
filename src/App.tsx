@@ -7,11 +7,10 @@ import {
   Contact,
   Homelayout,
   Landingpage,
-  ProfilePage,
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
-
+import { loader as landingLoader } from "./component/landing/RecomendedHomes";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +21,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Landingpage />,
         errorElement: <Erorr />,
+        loader: landingLoader,
       },
       {
         path: "/properties",
@@ -51,11 +51,6 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
-        errorElement: <Erorr />,
-      },
-      {
-        path: "profile",
-        element: <ProfilePage />,
         errorElement: <Erorr />,
       },
     ],
