@@ -17,7 +17,6 @@ const PropertyCard = ({
   image,
   sold,
 }: propertyCardType) => {
-  console.log(image);
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
