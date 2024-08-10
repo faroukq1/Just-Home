@@ -10,7 +10,7 @@ import {
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
-import { loader as landingLoader } from "./component/landing/RecomendedHomes";
+import { loader as landingLoader } from "./pages/Landingpage";
 const router = createBrowserRouter([
   {
     path: "/",
