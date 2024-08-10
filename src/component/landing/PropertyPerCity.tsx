@@ -5,7 +5,10 @@ import florida from "../../assets/florida.png";
 import chicago from "../../assets/chicago.png";
 import losangeles from "../../assets/losangeles.png";
 import miami from "../../assets/miami.png";
+import { useLoaderData } from "react-router-dom";
 const PropertyPerCity = () => {
+  const { data }: any = useLoaderData();
+  const PropertyPerCityData = data.sort(() => 0.5 - Math.random()).slice(0, 6);
   return (
     <div className="align-element mb-20">
       <PrintTitle
