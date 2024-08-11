@@ -1,10 +1,4 @@
 import PrintTitle from "../global/PrintTitle";
-import newYork from "../../assets/newyork.png";
-import sandiego from "../../assets/sandiego.png";
-import florida from "../../assets/florida.png";
-import chicago from "../../assets/chicago.png";
-import losangeles from "../../assets/losangeles.png";
-import miami from "../../assets/miami.png";
 import { Link, useLoaderData } from "react-router-dom";
 const PropertyPerCity = () => {
   const { data }: any = useLoaderData();

@@ -8,7 +8,6 @@ const RecomendedHomes = () => {
     (item: any) => item.attributes.featured
   );
 
-  console.log(data);
   return (
     <div className="bg-base-100 align-element my-28">
       <PrintTitle title="homes for you" subTitle="Based on your view history" />

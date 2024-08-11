@@ -1,10 +1,14 @@
 import PrintTitle from "../global/PrintTitle";
 import decore from "../../assets/decore.png";
 import decore2 from "../../assets/decore2.png";
-import villa from "../../assets/villa.png";
 import { FaArrowRight } from "react-icons/fa6";
+import { useLoaderData } from "react-router-dom";
 
 const BestProperty = () => {
+  const { data }: any = useLoaderData();
+  const number = Math.floor(Math.random() * data.length);
+  const image =
+    data[number].attributes.image.data.attributes.formats.medium.url;
   return (
     <div className="align-element my-20">
       <PrintTitle
@@ -31,7 +35,11 @@ const BestProperty = () => {
             </div>
           </div>
         </div>
-        <img src={villa} alt="villa" className="w-[100%] md:w-[50%]" />
+        <img
+          src={`http://localhost:1337${image}`}
+          alt="villa"
+          className="w-[100%] md:w-[50%] rounded-md"
+        />
       </div>
     </div>
   );
