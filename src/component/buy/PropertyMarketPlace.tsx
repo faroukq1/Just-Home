@@ -3,11 +3,11 @@ import { FaThList } from "react-icons/fa";
 import PropertyCard from "../global/PropertyCard";
 import { useState } from "react";
 import PropertyCardList from "../global/PropertyCardList";
+import { useLoaderData } from "react-router-dom";
 
 const PropertyMarketPlace = () => {
   const [view, setView] = useState("grid");
-  const makeItGrid = () => setView("grid");
-  const makeItList = () => setView("list");
+  const { data }: any = useLoaderData();
   return (
     <div
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -19,7 +19,7 @@ const PropertyMarketPlace = () => {
         </h1>
         <div className="flex items-center gap-5">
           <button
-            onClick={makeItGrid}
+            onClick={() => setView("grid")}
             className={`btn ${
               view === "grid" ? "btn-success" : "btn-ghost"
             } btn-sm btn-circle btn-active`}
@@ -28,7 +28,7 @@ const PropertyMarketPlace = () => {
           </button>
 
           <button
-            onClick={makeItList}
+            onClick={() => setView("list")}
             className={`btn btn-sm ${
               view === "list" ? "btn-success" : "btn-ghost"
             } btn-circle`}
@@ -41,11 +41,42 @@ const PropertyMarketPlace = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-4">
-        {Array.from({ length: 10 }, (_, index) => {
+        {data.map((item: any) => {
+          console.log();
+          const {
+            title,
+            price,
+            address,
+            sold,
+            description,
+          }: {
+            title: string;
+            price: number;
+            address: string;
+            sold: boolean;
+            description: string;
+          } = item.attributes;
+          const image =
+            item.attributes.image.data.attributes.formats.medium.url;
+          const images = item.attributes.images.data;
           return view === "grid" ? (
-            <PropertyCard key={index} />
+            <PropertyCard
+              title={title}
+              price={price}
+              address={address}
+              image={image}
+              sold={sold}
+              key={item.id}
+            />
           ) : (
-            <PropertyCardList key={index} />
+            <PropertyCardList
+              title={title}
+              address={address}
+              description={description}
+              image={image}
+              images={images}
+              key={item.id}
+            />
           );
         })}
       </div>

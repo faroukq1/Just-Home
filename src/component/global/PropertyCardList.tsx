@@ -1,23 +1,40 @@
 import { TbBed } from "react-icons/tb";
-import image from "../../assets/kitchen.png";
 import { LuBath } from "react-icons/lu";
 import { MdOutlineSelectAll } from "react-icons/md";
+import { useState } from "react";
 
-const PropertyCardList = () => {
+type propertyCardList = {
+  title: string;
+  address: string;
+  description: string;
+  image: string;
+  images: string[];
+};
+const PropertyCardList = ({
+  title,
+  address,
+  description,
+  image,
+  images,
+}: propertyCardList) => {
+  const [select, setSelect] = useState(0);
+  const [currentImage, setCurrentImage] = useState(image);
+  const handlePictureChange = (image: string, index: number) => {
+    setSelect(index);
+    setCurrentImage(image);
+  };
   return (
-    <div className="grid md:grid-cols-2 p-2 shadow-md bg-neutral-50">
+    <div className="grid gap-10 md:grid-cols-2 p-2 shadow-md bg-neutral-50">
       <div className="flex justify-center items-center">
         <img
-          src={image}
+          src={`http://localhost:1337${currentImage}`}
           alt="image"
-          className="h-[90%] w-[100%] rounded-md mr-5"
+          className="max-h-[70%] w-[100%] h-[500px]  object-cover  rounded-md "
         />
       </div>
       <div className="flex flex-col justify-center">
-        <h3 className="text-xl tracking-wide font-medium">
-          card title example
-        </h3>
-        <p className="text-neutwral-400 text-sm mb-3">card description</p>
+        <h3 className="text-xl tracking-wide font-medium">{title}</h3>
+        <p className="text-neutwral-400 text-sm mb-3">{address}</p>
         <div className="flex gap-4 my-4">
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
             <TbBed />4 beds
@@ -31,27 +48,24 @@ const PropertyCardList = () => {
           </span>
         </div>
         <p className="text-sm leading-6 font-light text-neutral-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam porro
-          exercitationem, dolores odit minima sapiente ratione blanditiis iure
-          quaerat praesentium voluptatum sequi quod eum quisquam voluptates
-          animi? Numquam quod delectus nisi corporis, explicabo perferendis
-          libero fugit laboriosam doloribus, eveniet molestiae fuga? Aliquam
-          consectetur nam impedit adipisci aliquid? Voluptatem, impedit officia.
+          {description}
         </p>
 
         <div className="mt-2">
           <h3 className="tracking-wide text-neutral-500 mb-2">more image</h3>
           <div className="flex gap-2">
-            {Array.from({ length: 5 }, (_, index) => {
+            {images.map((item: any, index: number) => {
+              const image = item.attributes.formats.small.url;
               return (
-                <img
-                  src={image}
-                  alt="image"
-                  key={index}
-                  className={`w-16 h-16 object-cover ${
-                    index === 0 && "border-2 border-red-800"
-                  } rounded-md`}
-                />
+                <button onClick={() => handlePictureChange(image, index)}>
+                  <img
+                    src={`http://localhost:1337${image}`}
+                    key={item.id}
+                    className={`w-16 h-16 object-cover ${
+                      select === index && "border-2 border-red-800"
+                    } rounded-md`}
+                  />
+                </button>
               );
             })}
           </div>

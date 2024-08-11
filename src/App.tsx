@@ -11,6 +11,7 @@ import {
 } from "./pages";
 import { Erorr } from "./component";
 import { loader as landingLoader } from "./pages/Landingpage";
+import { loader as propertiesLoader } from "./pages/BuyProperty";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
         path: "/properties",
         element: <BuyProperty />,
         errorElement: <Erorr />,
+        loader: propertiesLoader,
       },
       {
         path: "/property/:id",
