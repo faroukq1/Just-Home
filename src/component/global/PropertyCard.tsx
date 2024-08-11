@@ -20,7 +20,11 @@ const PropertyCard = ({
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
-        <img src={`http://localhost:1337${image}`} alt="card image" />
+        <img
+          src={`http://localhost:1337${image}`}
+          alt="card image"
+          className="w-96 h-60 object-cover"
+        />
       </figure>
       <div className="card-body">
         <h1 className="flex justify-between gap-2 text-lg text-accent-content">

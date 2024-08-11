@@ -14,7 +14,7 @@ import {
 import customFetch from "../util/customFetch";
 
 export const loader = async () => {
-  const url = "api/properties?populate=images";
+  const url = "/api/properties?populate[image]=*&populate[images]=*";
   const response = await customFetch(url);
   const data = response.data.data;
   return { data };
