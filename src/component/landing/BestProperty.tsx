@@ -24,7 +24,7 @@ const BestProperty = () => {
               <p className="text-white font-semibold">property</p>
               <p className="text-sm mt-4 text-neutral-400">
                 Explore our wide variety of properties to fid your dream home
-                today
+                today.
               </p>
               <div className="bg-white rounded-full w-fit p-3 absolute bottom-6 right-6">
                 <FaArrowRight className="text-xl" />
