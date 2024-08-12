@@ -10,7 +10,7 @@ type propertyCardType = {
   image: string;
   sold: boolean;
 };
-const PropertyCard = ({
+const   PropertyCard = ({
   title,
   price,
   address,
