@@ -2,11 +2,12 @@ import PrintTitle from "../global/PrintTitle";
 import decore from "../../assets/decore.png";
 import decore2 from "../../assets/decore2.png";
 import { FaArrowRight } from "react-icons/fa6";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const BestProperty = () => {
   const { data }: any = useLoaderData();
   const number = Math.floor(Math.random() * data.length);
+  const id = data[number].id;
   const image =
     data[number].attributes.image.data.attributes.formats.medium.url;
   return (
@@ -35,11 +36,13 @@ const BestProperty = () => {
             </div>
           </div>
         </div>
-        <img
-          src={`http://localhost:1337${image}`}
-          alt="villa"
-          className="w-[100%] md:w-[50%] rounded-md"
-        />
+        <Link to={`/property/${id}`} className="w-full ">
+          <img
+            className="h-full w-[100%] object-conver rounded-md"
+            src={`http://localhost:1337${image}`}
+            alt="villa"
+          />
+        </Link>
       </div>
     </div>
   );
