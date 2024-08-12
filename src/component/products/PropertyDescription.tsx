@@ -1,7 +1,6 @@
 import { FaWifi } from "react-icons/fa";
 import { LuBedDouble } from "react-icons/lu";
 import { FaBath } from "react-icons/fa6";
-import { MdOutlineBreakfastDining } from "react-icons/md";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { useLoaderData } from "react-router-dom";
 

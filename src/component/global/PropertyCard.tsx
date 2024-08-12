@@ -51,11 +51,6 @@ const PropertyCard = ({
           </span>
         </div>
       </div>
-      <div className="bg-green-950 rounded-full text-center absolute top-2 left-2 px-4 py-2">
-        <p className="uppercase text-white text-sm">
-          {!sold ? "buy now" : "not available"}
-        </p>
-      </div>
       <Link
         to={`/property/${id}`}
         className={`btn btn-success mr-4 mb-4 text-white ${
