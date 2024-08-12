@@ -2,8 +2,10 @@ import { TbBed } from "react-icons/tb";
 import { LuBath } from "react-icons/lu";
 import { MdOutlineSelectAll } from "react-icons/md";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type propertyCardList = {
+  id: number;
   title: string;
   address: string;
   description: string;
@@ -11,6 +13,7 @@ type propertyCardList = {
   images: string[];
 };
 const PropertyCardList = ({
+  id,
   title,
   address,
   description,
@@ -25,12 +28,18 @@ const PropertyCardList = ({
   };
   return (
     <div className="grid gap-10 md:grid-cols-2 p-2 shadow-md bg-neutral-50">
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col gap-2 justify-center items-center">
         <img
           src={`http://localhost:1337${currentImage}`}
           alt="image"
           className="max-h-[70%] w-[100%] h-[500px]  object-cover  rounded-md "
         />
+        <Link
+          className="text-white w-full btn btn-success"
+          to={`/property/${id}`}
+        >
+          Book Now
+        </Link>
       </div>
       <div className="flex flex-col justify-center">
         <h3 className="text-xl tracking-wide font-medium">{title}</h3>

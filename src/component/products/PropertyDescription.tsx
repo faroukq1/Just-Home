@@ -3,27 +3,20 @@ import { LuBedDouble } from "react-icons/lu";
 import { FaBath } from "react-icons/fa6";
 import { MdOutlineBreakfastDining } from "react-icons/md";
 import { BsArrowsFullscreen } from "react-icons/bs";
+import { useLoaderData } from "react-router-dom";
 
 const PropertyDescription = () => {
+  const { data }: any = useLoaderData();
+  const { title, description, address } = data.attributes;
   return (
     <div>
       <div className="my-6 flex flex-col gap-4">
-        <h1 className="text-4xl">Maxone Ascent Hotel Luxury Kota Malang</h1>
-        <p className="text-lg text-neutral-500">
-          JIn. Diaponegoro V No. 12, Kec, Lowokwaru, Kota Malang
-        </p>
+        <h1 className="text-4xl">{title}</h1>
+        <p className="text-lg text-neutral-500">{address}</p>
       </div>
       <div className="mb-4 flex flex-col gap-2">
         <h3 className="text-xl font-bold tracking-wide">Description</h3>
-        <p className="leading-7 text-neutral-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          omnis corrupti sunt impedit modi itaque magni vero soluta eius ex
-          nulla voluptas, esse asperiores numquam, dicta laudantium est dolorem
-          odit delectus praesentium nemo recusandae tenetur. Magnam voluptates
-          in quaerat culpa, excepturi quod eligendi at vero perferendis dolore
-          ullam soluta possimus vitae illum, fugit blanditiis! Quas eum quidem
-          dignissimos quaerat aliquid!
-        </p>
+        <p className="leading-7 text-neutral-500">{description}</p>
       </div>
       <div className="flex flex-col gap-6">
         <h3 className="text-xl font-bold tracking-wide">Hotel features</h3>

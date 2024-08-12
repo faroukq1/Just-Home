@@ -15,7 +15,7 @@ const PropertyMarketPlace = () => {
     >
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="text-neutral-700 font-medium tracking-wide">
-          result : 45 property founds
+          result : {data.length} property found{data.length >= 2 && "s"}
         </h1>
         <div className="flex items-center gap-5">
           <button
@@ -42,41 +42,20 @@ const PropertyMarketPlace = () => {
       </div>
       <div className="flex flex-wrap justify-center items-center gap-4">
         {data.map((item: any) => {
-          console.log();
-          const {
-            title,
-            price,
-            address,
-            sold,
-            description,
-          }: {
-            title: string;
-            price: number;
-            address: string;
-            sold: boolean;
-            description: string;
-          } = item.attributes;
-          const image =
-            item.attributes.image.data.attributes.formats.medium.url;
-          const images = item.attributes.images.data;
+          const cardData = {
+            id: item.id,
+            title: item.attributes.title,
+            price: item.attributes.price,
+            address: item.attributes.address,
+            sold: item.attributes.sold,
+            description: item.attributes.description,
+            image: item.attributes.image.data.attributes.formats.medium.url,
+            images: item.attributes.images.data,
+          };
           return view === "grid" ? (
-            <PropertyCard
-              title={title}
-              price={price}
-              address={address}
-              image={image}
-              sold={sold}
-              key={item.id}
-            />
+            <PropertyCard key={item.id} {...cardData} />
           ) : (
-            <PropertyCardList
-              title={title}
-              address={address}
-              description={description}
-              image={image}
-              images={images}
-              key={item.id}
-            />
+            <PropertyCardList key={item.id} {...cardData} />
           );
         })}
       </div>

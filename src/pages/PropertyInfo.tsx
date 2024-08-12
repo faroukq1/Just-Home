@@ -1,4 +1,13 @@
 import { PropertyDetails, PropertyPayment } from "../component";
+import customFetch from "../util/customFetch";
+
+export const loader = async ({ params }: any) => {
+  const response = await customFetch(
+    `/api/properties/${params.id}?populate[image]=*&populate[images]=*`
+  );
+  const data = response.data.data;
+  return { data };
+};
 
 const PropertyInfo = () => {
   return (

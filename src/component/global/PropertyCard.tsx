@@ -4,13 +4,15 @@ import { LuBath } from "react-icons/lu";
 import { MdOutlineSelectAll } from "react-icons/md";
 import { Link } from "react-router-dom";
 type propertyCardType = {
+  id: number;
   title: string;
   price: number;
   address: string;
   image: string;
   sold: boolean;
 };
-const   PropertyCard = ({
+const PropertyCard = ({
+  id,
   title,
   price,
   address,
@@ -54,7 +56,7 @@ const   PropertyCard = ({
         </p>
       </div>
       <Link
-        to="/property"
+        to={`/property/${id}`}
         className={`btn btn-success mr-4 mb-4 text-white ${
           sold && "btn-disabled"
         }`}
