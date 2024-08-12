@@ -3,7 +3,7 @@ import customFetch from "../util/customFetch";
 
 export const loader = async () => {
   const response = await customFetch(
-    "/api/properties?populate[image]=*&populate[images]=*"
+    "/api/properties/?populate[image]=*&populate[images]=*&populate[category]=*"
   );
   const data = response.data.data;
   return { data };

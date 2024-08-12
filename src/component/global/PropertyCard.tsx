@@ -3,6 +3,7 @@ import { TbBed } from "react-icons/tb";
 import { LuBath } from "react-icons/lu";
 import { MdOutlineSelectAll } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { convertPrice } from "../../util/helperFuntions";
 type propertyCardType = {
   id: number;
   title: string;
@@ -31,7 +32,7 @@ const PropertyCard = ({
       <div className="card-body">
         <h1 className="flex justify-between gap-2 text-lg text-accent-content">
           {title}
-          <span className="text-error">${price / 100}</span>
+          <span className="text-error">{convertPrice(price)}</span>
         </h1>
         <p className="flex items-center gap-1 text-sm font-light text-accent-content">
           <CiLocationOn className="text-xl" />
