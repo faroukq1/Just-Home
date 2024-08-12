@@ -12,31 +12,18 @@ const RecomendedHomes = () => {
     <div className="bg-base-100 align-element my-28">
       <PrintTitle title="homes for you" subTitle="Based on your view history" />
       <div className="flex gap-4 flex-wrap justify-center md:flex-nowrap">
-        {RecomendedHomesList.map((item: any, index: number) => {
-          const image =
-            item.attributes.image.data.attributes.formats.medium.url;
-          const {
-            title,
-            price,
-            address,
-            sold,
-          }: {
-            title: string;
-            price: number;
-            address: string;
-            image: string;
-            sold: boolean;
-          } = item.attributes;
-          return (
-            <PropertyCard
-              title={title}
-              price={price}
-              address={address}
-              sold={sold}
-              image={image}
-              key={index}
-            />
-          );
+        {RecomendedHomesList.map((item: any) => {
+          const cardData = {
+            id: item.id,
+            title: item.attributes.title,
+            price: item.attributes.price,
+            address: item.attributes.address,
+            sold: item.attributes.sold,
+            description: item.attributes.description,
+            image: item.attributes.image.data.attributes.formats.medium.url,
+            images: item.attributes.images.data,
+          };
+          return <PropertyCard {...cardData} key={item.id} />;
         })}
       </div>
     </div>
