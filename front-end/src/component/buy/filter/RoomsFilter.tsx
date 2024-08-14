@@ -1,17 +1,23 @@
-const RoomsFilter = () => {
+type roomType = {
+  data: string[];
+  type: string;
+  name: string;
+};
+const RoomsFilter = ({ data, type, name }: roomType) => {
+  console.log(data);
   return (
     <div className="mt-4">
       <h3 className="font-semibold tracking-wider">
         Rooms <span className="text-neutral-500 font-bold">(Min.)</span>
       </h3>
       <div>
-        {Array.from({ length: 4 }, (_, i) => {
-          const index = i + 1;
+        {data.map((item, index) => {
+          console.log(item);
           return (
             <div key={index} className="flex items-center gap-4 w-full mt-2">
-              <input type="checkbox" className="checkbox" />
+              <input name={name} type={type} className="checkbox" />
               <p>
-                {index} room{i > 1 && "s"}
+                {item} room{index > 1 && "s"}
               </p>
             </div>
           );

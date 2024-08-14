@@ -1,7 +1,16 @@
-const CustomInputNumber = ({ title }: { title: string }) => {
-  const minValue: number = 1000;
-  const maxPrice: number = 10000;
-  const steps: number = 1000;
+const CustomInputNumber = ({
+  title,
+  name,
+  min,
+  max,
+  steps,
+}: {
+  title: string;
+  name: string;
+  min: number;
+  max: number;
+  steps?: number;
+}) => {
   return (
     <div>
       <h3 className="mb-2 font-semibold tracking-wider">{title}</h3>
@@ -9,9 +18,10 @@ const CustomInputNumber = ({ title }: { title: string }) => {
         className="input input-bordered w-full"
         defaultValue="any"
         type="number"
-        min={minValue}
-        max={maxPrice}
-        step={steps}
+        min={min}
+        max={max}
+        step={steps || 10}
+        name={name}
       />
     </div>
   );
