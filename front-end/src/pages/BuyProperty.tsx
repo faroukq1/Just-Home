@@ -6,35 +6,34 @@ export const loader: LoaderFunction = async ({ request }) => {
   const searchParams = new URLSearchParams(url.search);
   const param: Record<string, string> = Object.fromEntries(searchParams);
   console.log(param);
-  const response = await customFetch("/api/properties", {
-    params: {
-      filters: {
-        title: {
-          $startsWith: param.name,
-        },
-        category: {
-          name: {
-            $eq: param.category,
+  const [res1, res2] = await Promise.all([
+    customFetch("/api/properties", {
+      params: {
+        filters: {
+          title: {
+            $startsWith: param.name,
+          },
+          category: {
+            name: {
+              $eq: param.category,
+            },
+          },
+          price: {
+            $gte: param.minPrice,
+            $lte: param.maxPrice,
           },
         },
-        price: {
-          $gte: param.minPrice,
-          $lte: param.maxPrice,
+        populate: {
+          image: "*",
+          images: "*",
+          category: "*",
         },
       },
-      populate: {
-        image: "*",
-        images: "*",
-        category: "*",
-      },
-    },
-  });
-  const data = response.data.data;
-  const categories = Array.from(
-    new Set(
-      data.map((item: any) => item.attributes.category.data.attributes.name)
-    )
-  );
+    }),
+    customFetch("/api/categories"),
+  ]);
+  const data = res1.data.data;
+  const categories = res2.data.data;
   return { categories, data };
 };
 
