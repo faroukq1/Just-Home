@@ -5,8 +5,12 @@ const BuySearchBar = () => {
   return (
     <div className="flex flex-wrap xl:flex-nowrap items-center gap-2 mb-2">
       <div className="flex items-center gap-2 w-full">
-        <label className="input input-bordered flex flex-row-reverse items-center gap-3 w-full">
+        <label
+          htmlFor="search"
+          className="input input-bordered flex flex-row-reverse items-center gap-3 w-full"
+        >
           <input
+            name="name"
             type="search"
             placeholder="Search for property..."
             className="grow"
@@ -15,7 +19,6 @@ const BuySearchBar = () => {
         </label>
         <SmallScreenFilter />
       </div>
-
       <div className="w-full flex justify-between xl:w-fit items-center gap-2">
         <button
           type="submit"
