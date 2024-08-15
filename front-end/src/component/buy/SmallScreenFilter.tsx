@@ -1,4 +1,12 @@
 import { GiSettingsKnobs } from "react-icons/gi";
+import BuyFilter from "./BuyFilter";
+import FilterHeader from "./filter/FilterHeader";
+import {
+  CustomInputNumber,
+  ProperyTypeFilter,
+  RentPeriod,
+  RoomFilter,
+} from "..";
 
 const SmallScreenFilter = () => {
   const displayModal = () => {
@@ -16,7 +24,7 @@ const SmallScreenFilter = () => {
         <GiSettingsKnobs className="text-2xl" />
       </button>
       <dialog id="modal_1" className="modal">
-        <div className="modal-box">
+        <div className="modal-box grid">
           <div className="modal-action">
             <form method="dialog">
               <button className="btn">close</button>

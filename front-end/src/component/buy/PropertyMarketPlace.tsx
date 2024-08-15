@@ -11,7 +11,7 @@ const PropertyMarketPlace = () => {
   return (
     <div
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      className="overflow-auto max-h-[80vh]"
+      className="w-full overflow-auto max-h-[80vh]"
     >
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="text-neutral-700 font-medium tracking-wide">
@@ -40,7 +40,7 @@ const PropertyMarketPlace = () => {
           </select>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4">
+      <div className="flex flex-wrap justify-start items-center gap-4">
         {data.map((item: any) => {
           const cardData = {
             id: item.id,

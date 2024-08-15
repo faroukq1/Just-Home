@@ -1,4 +1,3 @@
-import { useLoaderData } from "react-router-dom";
 const PropertyTypeFilter = ({
   name,
   label,
@@ -8,12 +7,14 @@ const PropertyTypeFilter = ({
   label: string;
   type: string;
 }) => {
-  const { data }: any = useLoaderData();
-  const categories = Array.from(
-    new Set(
-      data.map((item: any) => item.attributes.category.data.attributes.name)
-    )
-  );
+  const categories = [
+    "Commercial",
+    "Industrial",
+    "Luxury",
+    "Residential",
+    "Vacation",
+    "family",
+  ];
   return (
     <div className="mt-4">
       <h3 className="font-semibold tracking-wider">{label}</h3>
@@ -21,7 +22,12 @@ const PropertyTypeFilter = ({
         {categories.map((item: any, index: number) => {
           return (
             <div key={index} className="flex items-center gap-4 w-full mt-2">
-              <input name={name} type={type} className="checkbox" />
+              <input
+                name={name}
+                value={item}
+                type={type}
+                className="checkbox"
+              />
               <p>{item}</p>
             </div>
           );
