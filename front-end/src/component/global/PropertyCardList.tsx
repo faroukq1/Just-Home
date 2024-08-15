@@ -66,10 +66,12 @@ const PropertyCardList = ({
             {images.map((item: any, index: number) => {
               const image = item.attributes.formats.small.url;
               return (
-                <button onClick={() => handlePictureChange(image, index)}>
+                <button
+                  key={item.id}
+                  onClick={() => handlePictureChange(image, index)}
+                >
                   <img
                     src={`http://localhost:1337${image}`}
-                    key={item.id}
                     className={`w-16 h-16 object-cover ${
                       select === index && "border-2 border-red-800"
                     } rounded-md`}

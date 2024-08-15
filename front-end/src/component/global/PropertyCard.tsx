@@ -11,6 +11,7 @@ type propertyCardType = {
   address: string;
   image: string;
   sold: boolean;
+  features: any;
 };
 const PropertyCard = ({
   id,
@@ -19,7 +20,13 @@ const PropertyCard = ({
   address,
   image,
   sold,
+  features,
 }: propertyCardType) => {
+  const {
+    beds,
+    bathrooms,
+    dimension: { width, height },
+  } = features;
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
@@ -40,14 +47,16 @@ const PropertyCard = ({
         </p>
         <div className="flex gap-4 mt-2">
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
-            <TbBed />4 beds
+            <TbBed />
+            {beds} bed{beds > 1 && "s"}
           </span>
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
-            <LuBath />2 Baths
+            <LuBath />
+            {bathrooms} Bath{bathrooms > 1 && "s"}
           </span>
           <span className="flex items-center gap-2 text-sm pr-4">
             <MdOutlineSelectAll />
-            450 sqft
+            {width * height} sqft
           </span>
         </div>
       </div>

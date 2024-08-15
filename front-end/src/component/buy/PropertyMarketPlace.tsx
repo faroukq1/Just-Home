@@ -51,7 +51,9 @@ const PropertyMarketPlace = () => {
             description: item.attributes.description,
             image: item.attributes.image.data.attributes.formats.medium.url,
             images: item.attributes.images.data,
+            features: item.attributes.features.features,
           };
+          console.log();
           return view === "grid" ? (
             <PropertyCard key={item.id} {...cardData} />
           ) : (
