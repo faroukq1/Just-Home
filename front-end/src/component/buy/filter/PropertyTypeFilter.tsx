@@ -1,3 +1,5 @@
+import { useLoaderData } from "react-router-dom";
+
 const PropertyTypeFilter = ({
   name,
   label,
@@ -7,14 +9,7 @@ const PropertyTypeFilter = ({
   label: string;
   type: string;
 }) => {
-  const categories = [
-    "Commercial",
-    "Industrial",
-    "Luxury",
-    "Residential",
-    "Vacation",
-    "family",
-  ];
+  const { categories }: any = useLoaderData();
   return (
     <div className="mt-4">
       <h3 className="font-semibold tracking-wider">{label}</h3>

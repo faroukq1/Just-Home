@@ -29,9 +29,13 @@ export const loader: LoaderFunction = async ({ request }) => {
       },
     },
   });
-
   const data = response.data.data;
-  return { data };
+  const categories = Array.from(
+    new Set(
+      data.map((item: any) => item.attributes.category.data.attributes.name)
+    )
+  );
+  return { categories, data };
 };
 
 const BuyProperty = () => {
