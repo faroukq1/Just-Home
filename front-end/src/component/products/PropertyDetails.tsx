@@ -5,7 +5,7 @@ import {
 } from "../../component";
 const PropertyDetails = () => {
   return (
-    <div className="flex-1 h-screen">
+    <div className="h-[100%]">
       <PropertyImages />
       <PropertyBadges />
       <PropertyDescription />

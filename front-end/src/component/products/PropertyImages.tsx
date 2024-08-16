@@ -9,30 +9,30 @@ const PropertyImages = () => {
   const image3 =
     data.attributes.images.data[3 % length].attributes.formats.small.url;
   return (
-    <div className="flex gap-4 h-[46%]">
-      <div className="flex-1 h-full">
+    <div className="flex gap-4">
+      <div className="flex">
         <img
           src={`http://localhost:1337${data.attributes.image.data.attributes.formats.medium.url}`}
           alt="hotel2"
-          className="object-cover w-full h-full rounded-l-[1rem]"
+          className="object-cover w-full rounded-l-[1rem] h-full"
         />
       </div>
-      <div style={{ flexGrow: "0.1" }} className="flex flex-col gap-2 h-full">
+      <div className="flex flex-col gap-2">
         <img
           src={`http://localhost:1337${image1}`}
           alt="hotel2"
-          className="object-cover w-full h-[32%] rounded-tr-[1rem]"
+          className="object-cover w-full rounded-tr-[1rem]"
         />
         <img
           src={`http://localhost:1337${image2}`}
           alt="hotel2"
-          className="object-cover h-[32%]"
+          className="object-cover"
         />
-        <div className="w-full h-[32%] relative">
+        <div className="w-full relative">
           <img
             src={`http://localhost:1337${image3}`}
             alt="hotel4"
-            className="w-full h-full object-cover rounded-br-[1rem]"
+            className="w-full object-cover rounded-br-[1rem]"
           />
           {length > 3 ? (
             <div className="bg-white opacity-80 w-full h-full absolute z-[0] rounded-br-[1rem] top-0 right-0 flex justify-center items-center">

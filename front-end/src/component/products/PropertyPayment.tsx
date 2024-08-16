@@ -45,8 +45,8 @@ const priceData = [
 const PropertyPayment = () => {
   return (
     <div
-      style={{ flexGrow: "0.2" }}
-      className="px-8 py-4 border border-b-neutral-500 rounded-3xl h-fit"
+      style={{ flexGrow: "0.3" }}
+      className="px-8 py-4 border border-b-neutral-500 rounded-3xl h-fit w-full"
     >
       <div className="pb-4 flex items-center gap-4 justify-between border-b border-b-neutral-300">
         <h1 className="text-xl font-bold">
@@ -109,7 +109,7 @@ const PropertyPayment = () => {
         </h3>
         <button
           type="button"
-          className="btn btn-success w-full text-white tracking-wide mt-3"
+          className="btn btn-neutral w-full text-white tracking-wide mt-3"
         >
           Book Now
         </button>
