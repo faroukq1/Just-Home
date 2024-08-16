@@ -21,7 +21,7 @@ const PropertyMarketPlace = () => {
           <button
             onClick={() => setView("grid")}
             className={`btn ${
-              view === "grid" ? "btn-success" : "btn-ghost"
+              view === "grid" ? "btn-neutral" : "btn-ghost"
             } btn-sm btn-circle btn-active`}
           >
             <BsGrid1X2Fill className="text-white" />
@@ -30,12 +30,12 @@ const PropertyMarketPlace = () => {
           <button
             onClick={() => setView("list")}
             className={`btn btn-sm ${
-              view === "list" ? "btn-success" : "btn-ghost"
+              view === "list" ? "btn-neutral" : "btn-ghost"
             } btn-circle`}
           >
             <FaThList />
           </button>
-          <select className="select select-bordered select-sm select-success w-full">
+          <select className="select select-bordered select-sm select-neutral w-full">
             <option>Popular</option>
           </select>
         </div>

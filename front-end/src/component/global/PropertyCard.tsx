@@ -62,7 +62,7 @@ const PropertyCard = ({
       </div>
       <Link
         to={`/property/${id}`}
-        className={`btn btn-success mr-4 mb-4 text-white ${
+        className={`btn btn-neutral mr-4 mb-4 text-white ${
           sold && "btn-disabled"
         }`}
       >
