@@ -9,6 +9,7 @@ const PropertyForm = () => {
   const handleWifiStateChanges = () => setHasWifi(!hasWifi);
   return (
     <div className="flex flex-col items-start carousel-item w-full">
+      <h3 className="ml-2 text-xl font-semibold mb-4">Property Information</h3>
       <div className="w-full flex gap-4">
         <label className="form-control w-full max-w-xs">
           <div className="label">
@@ -89,11 +90,9 @@ const PropertyForm = () => {
           />
         </div>
       </label>
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold tracking-wider">
-          Property Features
-        </h3>
-        <div className="mt-4 flex gap-8 bg-neutral-content px-10 py-3 rounded-md">
+      <h3 className="mt-8 text-xl font-semibold">Property Features</h3>
+      <div className="w-full flex items-center gap-4">
+        <div className="flex gap-8 bg-neutral-content px-10 py-3 rounded-md">
           <button
             className={`btn btn-circle ${
               hasWifi ? "btn-neutral" : "btn-ghost"
@@ -112,7 +111,18 @@ const PropertyForm = () => {
             <RxDimensions className="text-2xl" />
           </button>
         </div>
-        <div>{/* complete here */}</div>
+        <div>
+          <h3 className="font-semibold">
+            Wifi : <span className="font-normal">this property have wifi</span>
+          </h3>
+          <h3 className="font-semibold">
+            Beds :<span className="font-normal">this property have 4 beds</span>
+          </h3>
+          <h3 className="font-semibold">
+            baths :
+            <span className="font-normal">this property have 4 bathrooms</span>
+          </h3>
+        </div>
       </div>
     </div>
   );
