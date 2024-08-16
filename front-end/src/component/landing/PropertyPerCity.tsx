@@ -25,7 +25,7 @@ const PropertyPerCity = () => {
       <div className="flex flex-col justify-center items-center lg:flex-row gap-2">
         <div className="flex flex-wrap flex-col sm:flex-nowrap">
           <Link className="relative" to={`property/${image1.id}`}>
-            <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-lg ">
+            <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
               {image1.country}
             </h3>
             <img
@@ -36,7 +36,7 @@ const PropertyPerCity = () => {
           </Link>
           <div className="flex flex-wrap sm:flex-nowrap gap-2 my-2">
             <Link className="relative" to={`property/${image1.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-lg ">
+              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
                 {image2.country}
               </h3>
               <img
@@ -46,7 +46,7 @@ const PropertyPerCity = () => {
               />
             </Link>
             <Link className="relative" to={`property/${image3.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-lg ">
+              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
                 {image3.country}
               </h3>
               <img
@@ -60,7 +60,7 @@ const PropertyPerCity = () => {
         <div className="flex flex-col gap-2 mb-2">
           <div className="flex flex-wrap sm:flex-nowrap gap-2">
             <Link className="relative" to={`property/${image4.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-lg ">
+              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
                 {image4.country}
               </h3>
               <img
@@ -70,7 +70,7 @@ const PropertyPerCity = () => {
               />
             </Link>
             <Link className="relative" to={`property/${image5.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-lg ">
+              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
                 {image5.country}
               </h3>
               <img
@@ -81,7 +81,7 @@ const PropertyPerCity = () => {
             </Link>
           </div>
           <Link className="relative" to={`property/${image6.id}`}>
-            <h3 className="top-4 left-4 btn btn-sm btn-neutral absolute z-20 font-bold text-lg ">
+            <h3 className="top-4 left-4 btn btn-sm btn-neutral absolute z-20 font-bold text-sm ">
               {image6.country}
             </h3>
             <img
