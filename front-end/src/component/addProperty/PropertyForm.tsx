@@ -111,18 +111,6 @@ const PropertyForm = () => {
             <RxDimensions className="text-2xl" />
           </button>
         </div>
-        <div>
-          <h3 className="font-semibold">
-            Wifi : <span className="font-normal">this property have wifi</span>
-          </h3>
-          <h3 className="font-semibold">
-            Beds :<span className="font-normal">this property have 4 beds</span>
-          </h3>
-          <h3 className="font-semibold">
-            baths :
-            <span className="font-normal">this property have 4 bathrooms</span>
-          </h3>
-        </div>
       </div>
     </div>
   );
