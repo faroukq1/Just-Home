@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   About,
+  AddProperty,
   Article,
   Blog,
   BuyProperty,
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "add",
+        element: <AddProperty />,
         errorElement: <Erorr />,
       },
     ],

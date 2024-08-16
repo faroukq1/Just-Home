@@ -15,7 +15,7 @@ const Navbar = () => {
       <Navlinks />
       <div className="hidden md:flex">
         <Link
-          to="/"
+          to="/add"
           className="btn btn-base-content btn-sm text-[12px] font-medium"
         >
           Add Property
