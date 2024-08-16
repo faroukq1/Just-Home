@@ -40,7 +40,7 @@ const PropertyMarketPlace = () => {
           </select>
         </div>
       </div>
-      <div className="flex flex-wrap justify-start items-center gap-4">
+      <div className="flex flex-wrap justify-center 2xl:justify-start items-center gap-4">
         {data.map((item: any) => {
           const cardData = {
             id: item.id,
