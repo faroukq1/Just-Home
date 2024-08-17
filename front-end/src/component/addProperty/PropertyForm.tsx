@@ -5,13 +5,11 @@ import { PiBathtubBold } from "react-icons/pi";
 import { RxDimensions } from "react-icons/rx";
 
 const PropertyForm = () => {
-  const [hasWifi, setHasWifi] = useState(false);
-  const handleWifiStateChanges = () => setHasWifi(!hasWifi);
   return (
     <div className="flex flex-col items-start carousel-item w-full">
       <h3 className="ml-2 text-xl font-semibold mb-4">Property Information</h3>
-      <div className="w-full flex gap-4">
-        <label className="form-control w-full max-w-xs">
+      <div className="w-full grid grid-cols-2 lg:grid-cols-5 gap-4">
+        <label className="form-control w-full">
           <div className="label">
             <span className="label-text font-semibold leading-8">
               Property Title
@@ -33,7 +31,7 @@ const PropertyForm = () => {
           <input
             type="text"
             placeholder="ex : Vacation"
-            className="input input-bordered p-4 w-full max-w-xs"
+            className="input input-bordered p-4 w-full"
           />
         </label>
         <label className="form-control w-full">
@@ -46,7 +44,7 @@ const PropertyForm = () => {
           <input
             type="text"
             placeholder="ex : New York"
-            className="input input-bordered p-4 w-full max-w-xs"
+            className="input input-bordered p-4 w-full"
           />
         </label>
         <label className="form-control w-full">
@@ -59,7 +57,7 @@ const PropertyForm = () => {
           <input
             type="text"
             placeholder="ex : 808 Greenway Plaza, Houston, TX"
-            className="input input-bordered p-4 w-full max-w-xs"
+            className="input input-bordered p-4 w-full"
           />
         </label>
         <label className="form-control w-full">
@@ -78,7 +76,7 @@ const PropertyForm = () => {
       </div>
       <label className="form-control w-full">
         <div className="label">
-          <span className="label-text font-semibold leading-8">
+          <span className="label-text text-xl font-semibold my-4 leading-8">
             Property Description
           </span>
         </div>
@@ -90,27 +88,50 @@ const PropertyForm = () => {
           />
         </div>
       </label>
-      <h3 className="mt-8 text-xl font-semibold">Property Features</h3>
-      <div className="w-full flex items-center gap-4">
-        <div className="flex gap-8 bg-neutral-content px-10 py-3 rounded-md">
-          <button
-            className={`btn btn-circle ${
-              hasWifi ? "btn-neutral" : "btn-ghost"
-            }`}
-            onClick={handleWifiStateChanges}
-          >
-            <FaWifi className="text-2xl" />
-          </button>
-          <button className="btn btn-circle btn-ghost">
-            <LiaBedSolid className="text-2xl" />
-          </button>
-          <button className="btn btn-circle btn-ghost">
-            <PiBathtubBold className="text-2xl" />
-          </button>
-          <button className="btn btn-circle btn-ghost">
-            <RxDimensions className="text-2xl" />
-          </button>
-        </div>
+      <h3 className="text-xl font-semibold my-6">Property Features</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 w-10/12 gap-4">
+        <label className="form-control">
+          <div className="label">
+            <span className="label-text font-semibold leading-8">beds</span>
+          </div>
+
+          <input
+            type="text"
+            placeholder="ex : 4 beds"
+            className="input input-bordered p-4"
+          />
+        </label>
+        <label className="form-control">
+          <div className="label">
+            <span className="label-text font-semibold leading-8">
+              bathrooms
+            </span>
+          </div>
+          <input
+            type="text"
+            placeholder="ex : 2 bathrooms"
+            className="input input-bordered p-4 w-full"
+          />
+        </label>
+        <label className="form-control">
+          <div className="label">
+            <span className="label-text font-semibold leading-8">
+              Property Dimension
+            </span>
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="text"
+              placeholder="ex : 50m"
+              className="input input-bordered p-4 w-full"
+            />
+            <input
+              type="text"
+              placeholder="ex : 10m"
+              className="input input-bordered p-4 w-full"
+            />
+          </div>
+        </label>
       </div>
     </div>
   );
