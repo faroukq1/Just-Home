@@ -1,9 +1,3 @@
-import { useState } from "react";
-import { FaWifi } from "react-icons/fa6";
-import { LiaBedSolid } from "react-icons/lia";
-import { PiBathtubBold } from "react-icons/pi";
-import { RxDimensions } from "react-icons/rx";
-
 const PropertyForm = () => {
   return (
     <div className="flex flex-col items-start carousel-item w-full">

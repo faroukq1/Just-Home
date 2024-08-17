@@ -1,5 +1,5 @@
 import { Form } from "react-router-dom";
-import { CreateListingBar, PropertyForm } from "../component";
+import { CreateListingBar, PropertyForm, PropertyPicutres } from "../component";
 
 const AddProperty = () => {
   return (
@@ -8,6 +8,7 @@ const AddProperty = () => {
       <Form>
         <div className="carousel rounded-box h-[75vh] w-full mt-8">
           <PropertyForm />
+          <PropertyPicutres />
         </div>
       </Form>
     </div>
