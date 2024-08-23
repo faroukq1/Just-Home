@@ -1,13 +1,9 @@
 import image from "../../assets/profilepic.png";
-import { IoIosSettings } from "react-icons/io";
 import { LiaUserEditSolid } from "react-icons/lia";
 
 const ProfileInformation = () => {
   return (
     <div className="relative w-1/3 h-fit p-4 bg-neutral-content rounded-lg flex flex-col justify-center gap-4">
-      <button className="absolute top-3 right-3 btn btn-square btn-sm">
-        <IoIosSettings className="text-2xl" />
-      </button>
       <div className="relative w-full grid place-items-center">
         <img
           src={image}
