@@ -20,7 +20,10 @@ const Navbar = () => {
               <img src={image} alt="profile image" />
             </div>
           </div>
-          <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow grid gap-1">
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow grid gap-1"
+          >
             <li>
               <Link to="/profile">profile</Link>
             </li>
