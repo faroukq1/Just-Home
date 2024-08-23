@@ -8,6 +8,7 @@ import {
   Contact,
   Homelayout,
   Landingpage,
+  Profile,
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
       {
         path: "add",
         element: <AddProperty />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
         errorElement: <Erorr />,
       },
     ],
