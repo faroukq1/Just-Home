@@ -1,0 +1,174 @@
+this is infinite token :
+6e9922cbf16e16df25057278acf71cc88fdc6a3fc67cf7a3c6c0dd74d1d6a8770d3c087a6663dbeba4bd2918d29354f981db731ad79c6f6f4309084985d8803c67fc24ca1e6059383d196fabee4707bc8dde13576c192368018c6713b59e164a94e600a2eb86913c21d8ba7870e5dd3a72901a77e59555d0d52e3c268f680852
+
+1- user registration
+METHOD POST
+http://localhost:1337/api/auth/local/register
+#notice
+this is a json object example to make registration
+
+{
+  "username": "your-username",
+  "email": "your-email@example.com",
+  "password": "your-password"
+}
+
+
+2- user login
+METHOD POST
+http://localhost:1337/api/auth/local
+#notice
+this is a json object example to make login
+
+{
+    "identifier" : "newFarouk@me.com",
+    "password" : "artoriastm"
+}
+
+3- find all property 
+METHOD : GET
+http://localhost:1337/api/properties
+
+
+4-create new property
+METHOD POST
+http://localhost:1337/api/properties
+
+#notice
+this is a json object example to make new property
+
+{
+  "data": {
+    "title": "Property Title",
+    "description": "Detailed description of the property.",
+    "price": 123456,
+    "address": "123 Main St, Anytown, USA",
+    "listedDate": "2024-08-01",
+    "sold": false,
+    "category": "4",
+    "user": "4"
+  }
+}
+#notice give the id of the category not the name
+
+4- delete property
+METHOD DELETE
+http://localhost:1337/api/properties/:id
+
+4- modify property
+METHOD PUT
+http://localhost:1337/api/properties/:id
+
+#notice
+{
+  "data": {
+    "title": "Updated Property Title",
+    "price": 450000
+  }
+}
+provide only the attrubute you want to change
+
+
+# API Queries for Properties
+
+## Basic Query to Get All Properties
+
+**Endpoint:**
+
+
+## Query Parameters
+
+### 1. Pagination
+
+- **Limit the Number of Results:**
+    ```bash
+    GET /api/properties?_limit=10
+    ```
+    - `?_limit=10` limits the response to 10 properties.
+
+- **Offset the Results:**
+    ```bash
+    GET /api/properties?_start=10&_limit=10
+    ```
+    - `?_start=10&_limit=10` skips the first 10 results and limits the response to 10 properties.
+
+- **Limit and Offset:**
+    ```bash
+    GET /api/properties?_start=20&_limit=10
+    ```
+    - Skips the first 20 results and limits the response to 10 properties.
+
+### 2. Sorting
+
+- **Sort by Field (e.g., Price in Ascending Order):**
+    ```bash
+    GET /api/properties?_sort=price:asc
+    ```
+    - `?_sort=price:asc` sorts properties by the `price` field in ascending order.
+
+- **Sort by Field (e.g., Created Date in Descending Order):**
+    ```bash
+    GET /api/properties?_sort=createdAt:desc
+    ```
+    - `?_sort=createdAt:desc` sorts properties by the `createdAt` field in descending order.
+
+### 3. Filtering
+
+- **Filter by Specific Field Value (e.g., Category Name):**
+    ```bash
+    GET /api/properties?filters[category][name][$eq]=Vacation
+    ```
+    - `?filters[category][name][$eq]=Vacation` filters properties where the `category` name is "Vacation".
+
+- **Filter by Range (e.g., Price Greater Than or Equal to 500000):**
+    ```bash
+    GET /api/properties?filters[price][$gte]=500000
+    ```
+    - `?filters[price][$gte]=500000` filters properties where the `price` is greater than or equal to 500,000.
+
+### 4. Combining Filters
+
+- **Filter by Multiple Criteria (e.g., Category and Price):**
+    ```bash
+    GET /api/properties?filters[category][name][$eq]=Vacation&filters[price][$gte]=500000
+    ```
+    - Filters properties where the `category` name is "Vacation" and `price` is greater than or equal to 500,000.
+
+### 5. Specific Field Projection
+
+- **Select Specific Fields to Return:**
+    ```bash
+    GET /api/properties?fields=title,price,address
+    ```
+    - `?fields=title,price,address` returns only the `title`, `price`, and `address` fields in the response.
+
+## Example Queries
+
+- **Get the First 10 Properties, Sorted by Price (Ascending):**
+    ```bash
+    GET /api/properties?_limit=10&_sort=price:asc
+    ```
+
+- **Get Properties in the "Vacation" Category with a Price Greater Than or Equal to 500000:**
+    ```bash
+    GET /api/properties?filters[category][name][$eq]=Vacation&filters[price][$gte]=500000
+    ```
+
+- **Get Properties with Only Title and Price Fields:**
+    ```bash
+    GET /api/properties?fields=title,price
+    ```
+
+## Notes
+
+- **Filters and Sorting:** The query syntax can vary slightly depending on your Strapi version and the database you're using. Ensure that the syntax aligns with your Strapi version.
+- **Field Names:** Replace field names like `category`, `price`, and `createdAt` with the actual names defined in your Strapi content type schema.
+
+
+
+####################
+landing page end points
+####################
+
+1- features product
+http://localhost:1337/api/properties?filters[featured][$eq]=true
