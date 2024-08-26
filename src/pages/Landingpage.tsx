@@ -12,12 +12,17 @@ import {
   BecomeAgent,
   PopularRealEstate,
 } from "../component";
-import customFetch from "../util/customFetch";
-
+import { createClient } from "contentful";
 export const loader: LoaderFunction = async () => {
-  const url = "/api/properties?populate[image]=*&populate[images]=*";
-  const response = await customFetch(url);
-  const data = response.data.data;
+  const client = createClient({
+    space: "iy103w94ko7f",
+    accessToken: "uSMTg31zCEiwkLrWvB99zzNYaKphOoefjDU7HGadzvs",
+  });
+
+  const res = await client.getEntries({
+    content_type: "justHomeContent",
+  });
+  const data = res.items;
   return { data };
 };
 
@@ -25,10 +30,10 @@ const Landingpage = () => {
   return (
     <main>
       <Hero />
-      <RecomendedHomes />
-      <PropertyPerCity />
+      {/* <RecomendedHomes /> */}
+      {/* <PropertyPerCity /> */}
       <ChooseUs />
-      <BestProperty />
+      {/* <BestProperty /> */}
       <Testimonial />
       <Review />
       <Companies />
