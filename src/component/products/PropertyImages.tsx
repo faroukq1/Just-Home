@@ -12,6 +12,7 @@ const PropertyImages = () => {
               src={`https:${item.fields.file.url}`}
               alt="aa"
               className="rounded-box w-96 h-96"
+              loading="lazy"
             />
           </div>
         );
