@@ -23,6 +23,7 @@ export const loader: LoaderFunction = async () => {
     content_type: "justHomeContent",
   });
   const data = res.items;
+  console.log(data);
   return { data };
 };
 
