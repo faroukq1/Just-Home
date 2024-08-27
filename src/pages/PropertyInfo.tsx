@@ -4,8 +4,8 @@ import { createClient } from "contentful";
 export const loader: LoaderFunction = async ({ params }) => {
   const id = params.id as string;
   const client = createClient({
-    space: "iy103w94ko7f",
-    accessToken: "uSMTg31zCEiwkLrWvB99zzNYaKphOoefjDU7HGadzvs",
+    space: import.meta.env.VITE_SPACE_TOKEN,
+    accessToken: import.meta.env.VITE_ACCESS_TOKEN,
   });
 
   const data = await client.getEntry(id);
