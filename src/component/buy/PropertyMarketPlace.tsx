@@ -8,6 +8,7 @@ import { useLoaderData } from "react-router-dom";
 const PropertyMarketPlace = () => {
   const [view, setView] = useState("grid");
   const { data }: any = useLoaderData();
+
   return (
     <div
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -43,20 +44,20 @@ const PropertyMarketPlace = () => {
       <div className="flex flex-wrap justify-center 2xl:justify-start items-center gap-4">
         {data.map((item: any) => {
           const cardData = {
-            id: item.id,
-            title: item.attributes.title,
-            price: item.attributes.price,
-            address: item.attributes.address,
-            sold: item.attributes.sold,
-            description: item.attributes.description,
-            image: item.attributes.image.data.attributes.formats.medium.url,
-            images: item.attributes.images.data,
-            features: item.attributes.features.features,
+            id: item.sys.id,
+            title: item.fields.title,
+            price: item.fields.price,
+            address: item.fields.address,
+            sold: item.fields.sold,
+            description: item.fields.description,
+            image: item.fields.image.fields.file.url,
+            images: item.fields.images,
+            features: item.fields.features,
           };
           return view === "grid" ? (
-            <PropertyCard key={item.id} {...cardData} />
+            <PropertyCard key={item.sys.id} {...cardData} />
           ) : (
-            <PropertyCardList key={item.id} {...cardData} />
+            <PropertyCardList key={item.sys.id} {...cardData} />
           );
         })}
       </div>
