@@ -8,7 +8,6 @@ import { useLoaderData } from "react-router-dom";
 const PropertyMarketPlace = () => {
   const [view, setView] = useState("grid");
   const { data }: any = useLoaderData();
-
   return (
     <div
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

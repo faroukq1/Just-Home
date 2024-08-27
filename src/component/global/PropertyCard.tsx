@@ -22,6 +22,7 @@ const PropertyCard = ({
   sold,
   features,
 }: propertyCardType) => {
+  console.log(1);
   const { bedrooms, bathrooms, floor_area } = features;
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">

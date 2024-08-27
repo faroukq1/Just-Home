@@ -30,7 +30,7 @@ const PropertyCardList = ({
     <div className="grid gap-10 md:grid-cols-2 p-2 shadow-md bg-neutral-50">
       <div className="flex flex-col gap-2 justify-center items-center">
         <img
-          src={`http://localhost:1337${currentImage}`}
+          src={`https:${currentImage}`}
           alt="image"
           className="max-h-[70%] w-[100%] h-[500px]  object-cover  rounded-md "
         />
@@ -64,14 +64,14 @@ const PropertyCardList = ({
           <h3 className="tracking-wide text-neutral-500 mb-2">more image</h3>
           <div className="flex gap-2">
             {images.map((item: any, index: number) => {
-              const image = item.attributes.formats.small.url;
+              const image = item.fields.file.url;
               return (
                 <button
-                  key={item.id}
+                  key={item.sys.id}
                   onClick={() => handlePictureChange(image, index)}
                 >
                   <img
-                    src={`http://localhost:1337${image}`}
+                    src={`https:${image}`}
                     className={`w-16 h-16 object-cover ${
                       select === index && "border-2 border-red-800"
                     } rounded-md`}

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.7.3",
+    "compress.js": "^2.1.2",
     "contentful": "^10.15.0",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
