@@ -34,7 +34,7 @@ const Landingpage = () => {
       <RecomendedHomes />
       <PropertyPerCity />
       <ChooseUs />
-      {/* <BestProperty /> */}
+      <BestProperty />
       <Testimonial />
       <Review />
       <Companies />

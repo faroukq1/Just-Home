@@ -7,9 +7,9 @@ import { Link, useLoaderData } from "react-router-dom";
 const BestProperty = () => {
   const { data }: any = useLoaderData();
   const number = Math.floor(Math.random() * data.length);
-  const id = data[number].id;
-  const image =
-    data[number].attributes.image.data.attributes.formats.medium.url;
+
+  const id = data[number].sys.id;
+  const image = `https:${data[0].fields.image.fields.file.url}`;
   return (
     <div className="align-element my-20">
       <PrintTitle
@@ -43,8 +43,8 @@ const BestProperty = () => {
         </div>
         <Link to={`/property/${id}`} className="w-full ">
           <img
-            className="h-full w-[100%] object-conver rounded-md"
-            src={`http://localhost:1337${image}`}
+            className="h-full w-[100%] objecst-conver rounded-md"
+            src={image}
             alt="villa"
           />
         </Link>
