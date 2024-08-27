@@ -29,12 +29,12 @@ const PropertyCard = ({
         <img
           src={`https:${image}`}
           alt="card image"
-          className="w-96 h-60 object-cover"
+          className="h-[250px] border-4 rounded-box sobject-cover"
           loading="lazy"
         />
       </figure>
       <div className="card-body">
-        <h1 className="flex justify-between gap-2 text-lg text-accent-content">
+        <h1 className="flex justify-between gap-2 text-accent-content">
           {title}
           <span className="text-error">{convertPrice(price)}</span>
         </h1>
@@ -59,7 +59,7 @@ const PropertyCard = ({
       </div>
       <Link
         to={`/property/${id}`}
-        className={`btn btn-neutral mr-4 mb-4 text-white ${
+        className={`ml-2 btn btn-neutral mr-4 mb-4 text-white ${
           sold && "btn-disabled"
         }`}
       >
