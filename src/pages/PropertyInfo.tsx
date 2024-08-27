@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 const PropertyInfo = () => {
   return (
-    <div className="py-16 align-element flex gap-4 flex-wrap lg:flex-nowrap">
+    <div className="py-16 align-element grid gap-8">
       <PropertyDetails />
       <PropertyPayment />
     </div>
