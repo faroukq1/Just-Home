@@ -1,12 +1,14 @@
 import { LoaderFunction } from "react-router-dom";
 import { PropertyDetails, PropertyPayment } from "../component";
-import customFetch from "../util/customFetch";
-
+import { createClient } from "contentful";
 export const loader: LoaderFunction = async ({ params }) => {
-  const response = await customFetch(
-    `/api/properties/${params.id}?populate[image]=*&populate[images]=*`
-  );
-  const data = response.data.data;
+  const id = params.id as string;
+  const client = createClient({
+    space: "iy103w94ko7f",
+    accessToken: "uSMTg31zCEiwkLrWvB99zzNYaKphOoefjDU7HGadzvs",
+  });
+
+  const data = await client.getEntry(id);
   return { data };
 };
 

@@ -6,7 +6,7 @@ import {
 const PropertyDetails = () => {
   return (
     <div className="h-[100%]">
-      <PropertyImages />
+      {/* <PropertyImages /> */}
       <PropertyBadges />
       <PropertyDescription />
     </div>

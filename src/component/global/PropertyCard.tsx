@@ -22,7 +22,6 @@ const PropertyCard = ({
   sold,
   features,
 }: propertyCardType) => {
-  console.log(1);
   const { bedrooms, bathrooms, floor_area } = features;
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
@@ -31,6 +30,7 @@ const PropertyCard = ({
           src={`https:${image}`}
           alt="card image"
           className="w-96 h-60 object-cover"
+          loading="lazy"
         />
       </figure>
       <div className="card-body">

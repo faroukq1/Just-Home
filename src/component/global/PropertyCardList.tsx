@@ -33,6 +33,7 @@ const PropertyCardList = ({
           src={`https:${currentImage}`}
           alt="image"
           className="max-h-[70%] w-[100%] h-[500px]  object-cover  rounded-md "
+          loading="lazy"
         />
         <Link
           className="text-white w-full btn btn-success"
@@ -72,6 +73,7 @@ const PropertyCardList = ({
                 >
                   <img
                     src={`https:${image}`}
+                    loading="lazy"
                     className={`w-16 h-16 object-cover ${
                       select === index && "border-2 border-red-800"
                     } rounded-md`}
