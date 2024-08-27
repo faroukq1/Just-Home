@@ -23,16 +23,16 @@ export const loader: LoaderFunction = async () => {
     content_type: "justHomeContent",
   });
   const data = res.items;
-  console.log(data);
-  return { data };
+  const specialHomes = data.filter((item) => item.fields.special);
+  return { data, specialHomes };
 };
 
 const Landingpage = () => {
   return (
     <main>
       <Hero />
-      {/* <RecomendedHomes /> */}
-      {/* <PropertyPerCity /> */}
+      <RecomendedHomes />
+      <PropertyPerCity />
       <ChooseUs />
       {/* <BestProperty /> */}
       <Testimonial />

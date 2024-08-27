@@ -2,20 +2,17 @@ import PrintTitle from "../global/PrintTitle";
 import { Link, useLoaderData } from "react-router-dom";
 const PropertyPerCity = () => {
   const { data }: any = useLoaderData();
-  const propertyCityData = data
-    .map((item: any, index: number) => {
-      if (index == 6) return;
-      const id = item.id;
-      const country = item.attributes.country;
-      const image = `http://localhost:1337${item.attributes.image.data.attributes.formats.medium.url}`;
+  const propertyPerCityData = data
+    .map((item: any) => {
+      const id = item.sys.id;
+      const image = item.fields.image.fields.file.url;
       return {
         id,
-        country,
         image,
       };
     })
     .slice(0, 6);
-  const [image1, image2, image3, image4, image5, image6] = propertyCityData;
+  const [img1, img2, img3, img4, img5, img6] = propertyPerCityData;
   return (
     <div className="align-element mb-20">
       <PrintTitle
@@ -24,69 +21,70 @@ const PropertyPerCity = () => {
       />
       <div className="flex flex-col justify-center items-center lg:flex-row gap-2">
         <div className="flex flex-wrap flex-col sm:flex-nowrap">
-          <Link className="relative" to={`property/${image1.id}`}>
-            <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-              {image1.country}
+          <Link className="relative" to={`property/${img1.id}`}>
+            <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm">
+              country
             </h3>
             <img
               className="w-full h-60 rounded-md object-cover"
-              src={image1.image}
+              src={img1.image}
               alt="new york"
             />
           </Link>
           <div className="flex flex-wrap sm:flex-nowrap gap-2 my-2">
-            <Link className="relative" to={`property/${image1.id}`}>
+            <Link className="relative" to={`property/${img2.id}`}>
               <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                {image2.country}
+                country
               </h3>
               <img
-                className="w-full h-full sm:w-60 rounded-md object-cover"
-                src={image2.image}
+                className="w-full sm:w-60 rounded-md object-cover"
+                src={img2.image}
                 alt="sandiego"
               />
             </Link>
-            <Link className="relative" to={`property/${image3.id}`}>
+            <Link className="relative" to={`property/${img3.id}`}>
               <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                {image3.country}
+                country
               </h3>
               <img
-                className="w-full h-full sm:w-60 rounded-md object-cover"
-                src={image3.image}
+                className="w-full sm:w-60 rounded-md object-cover"
+                src={img3.image}
                 alt="florida"
               />
             </Link>
           </div>
         </div>
+
         <div className="flex flex-col gap-2 mb-2">
           <div className="flex flex-wrap sm:flex-nowrap gap-2">
-            <Link className="relative" to={`property/${image4.id}`}>
+            <Link className="relative" to={`property/${img4.id}`}>
               <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                {image4.country}
-              </h3>
-              <img
-                className="w-full h-full sm:w-60 rounded-md object-cover"
-                src={image4.image}
-                alt="losangeles"
-              />
-            </Link>
-            <Link className="relative" to={`property/${image5.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                {image5.country}
+                country
               </h3>
               <img
                 className="w-full sm:w-60 rounded-md object-cover"
-                src={image5.image}
+                src={img4.image}
+                alt="losangeles"
+              />
+            </Link>
+            <Link className="relative" to={`property/${img5.id}`}>
+              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
+                country
+              </h3>
+              <img
+                className="w-full sm:w-60 rounded-md object-cover h-full"
+                src={img5.image}
                 alt="miami"
               />
             </Link>
           </div>
-          <Link className="relative" to={`property/${image6.id}`}>
+          <Link className="relative" to={`property/${img6.id}`}>
             <h3 className="top-4 left-4 btn btn-sm btn-neutral absolute z-20 font-bold text-sm ">
-              {image6.country}
+              country
             </h3>
             <img
               className="w-full h-60 rounded-md object-cover"
-              src={image6.image}
+              src={img6.image}
               alt="chicago"
             />
           </Link>

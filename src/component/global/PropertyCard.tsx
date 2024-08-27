@@ -22,16 +22,12 @@ const PropertyCard = ({
   sold,
   features,
 }: propertyCardType) => {
-  const {
-    beds,
-    bathrooms,
-    dimension: { width, height },
-  } = features;
+  const { bedrooms, bathrooms, floor_area } = features;
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
         <img
-          src={`http://localhost:1337${image}`}
+          src={`https:${image}`}
           alt="card image"
           className="w-96 h-60 object-cover"
         />
@@ -48,15 +44,15 @@ const PropertyCard = ({
         <div className="flex gap-4 mt-2">
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
             <TbBed />
-            {beds} bed{beds > 1 && "s"}
+            {bedrooms} bed{bedrooms > 1 && "s"}
           </span>
           <span className="flex items-center gap-2 text-sm border-r border-r-neutral-400 pr-4">
             <LuBath />
             {bathrooms} Bath{bathrooms > 1 && "s"}
           </span>
-          <span className="flex items-center gap-2 text-sm pr-4">
+          <span className="flex items-center gap-2 text-sm">
             <MdOutlineSelectAll />
-            {width * height} sqft
+            {floor_area}
           </span>
         </div>
       </div>
