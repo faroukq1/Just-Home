@@ -20,7 +20,7 @@ const PropertyDescription = () => {
       </div>
       <div className="flex flex-col gap-6">
         <h3 className="text-xl font-bold tracking-wide">Hotel features</h3>
-        <div className="flex justify-between">
+        <div className="flex gap-8">
           <span className="flex items-center gap-2 text-md text-neutral-500">
             <FaWifi className="text-2xl" />
             {!wifi && "No"} Wifi
