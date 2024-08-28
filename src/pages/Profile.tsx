@@ -1,5 +1,8 @@
 import { ProfileInformation } from "../component";
 
+export const loader = async () => {
+  return null;
+};
 const Profile = () => {
   return (
     <div className="h-screen align-element flex gap-4 p-4">
