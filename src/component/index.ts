@@ -39,3 +39,4 @@ export { default as PropertyForm } from "./addProperty/PropertyForm";
 export { default as PropertyPicutres } from "./addProperty/PropertyPicutres";
 export { default as ProfileInformation } from "./profile/ProfileInformation";
 export { default as EditInformation } from "./profile/EditInformation";
+export { default as ImageWithBlurHash } from "./global/ImageWithBlurHash";

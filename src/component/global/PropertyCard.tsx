@@ -4,6 +4,7 @@ import { LuBath } from "react-icons/lu";
 import { MdOutlineSelectAll } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { convertPrice } from "../../util/helperFuntions";
+import ImageWithBlurHash from "./ImageWithBlurHash";
 type propertyCardType = {
   id: number;
   title: string;
@@ -26,11 +27,12 @@ const PropertyCard = ({
   return (
     <div className="card bg-base-100 w-96 shadow-xl rounded-md">
       <figure>
-        <img
-          src={`https:${image}`}
-          alt="card image"
-          className="h-[250px] border-4 rounded-box sobject-cover"
-          loading="lazy"
+        <ImageWithBlurHash
+          blurhash="LEHV6nWB2yk8pyo0adR*.7kCMdnj"
+          imageUrl={`https:${image}`}
+          alt={title}
+          width={500}
+          height={250}
         />
       </figure>
       <div className="card-body">
