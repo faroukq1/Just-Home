@@ -22,7 +22,6 @@ export { default as FooterContent } from "./global/footer/FooterContent";
 export { default as BuySearchBar } from "./buy/BuySearchBar";
 export { default as BuyFilter } from "./buy/BuyFilter";
 export { default as FilterHeader } from "./buy/filter/FilterHeader";
-export { default as ProperyTypeFilter } from "./buy/filter/PropertyTypeFilter";
 export { default as RoomFilter } from "./buy/filter/RoomsFilter";
 export { default as RentPeriod } from "./buy/filter/RentPeriod";
 export { default as PropertyMarketPlace } from "./buy/PropertyMarketPlace";

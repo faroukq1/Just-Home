@@ -13,14 +13,18 @@ export const loader: LoaderFunction = async ({ params }) => {
     accessToken: import.meta.env.VITE_ACCESS_TOKEN,
   });
   const nextItems = parseInt(params.page as string) - 1;
-  const res = await client.getEntries({
+  const fetchProperties = await client.getEntries({
     content_type: "justHomeContent",
     limit: 6,
     skip: nextItems * 6,
   });
-  const totalItem = res.total;
-  const data = res.items;
-  return { data, totalItem };
+  const fetchCategories = await client.getEntries({
+    content_type: "category",
+  });
+  const categories = fetchCategories.items;
+  const totalItem = fetchProperties.total;
+  const data = fetchProperties.items;
+  return { data, totalItem, categories };
 };
 
 const BuyProperty = () => {
