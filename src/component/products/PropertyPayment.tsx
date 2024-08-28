@@ -4,11 +4,12 @@ import { FaPhoneSquare } from "react-icons/fa";
 
 const PropertyPayment = () => {
   const { data }: any = useLoaderData();
+  const userId = data.fields.propertyOwner.sys.id;
   const { profileimage, firstName, lastName, username, email, phoneNumber } =
     data.fields.propertyOwner.fields;
   return (
     <div>
-      <Link to={`/profile/${username}`} className="flex items-center gap-4">
+      <Link to={`/profile/${userId}`} className="flex items-center gap-4">
         <div className="avatar">
           <div className="w-14 rounded-full">
             <img src={`https:${profileimage.fields.file.url}`} />

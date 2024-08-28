@@ -1,7 +1,18 @@
+import { LoaderFunction } from "react-router-dom";
 import { ProfileInformation } from "../component";
+import { createClient } from "contentful";
+export const loader: LoaderFunction = async ({ params }) => {
+  const id = params.id as string;
+  const client = createClient({
+    space: import.meta.env.VITE_SPACE_TOKEN,
+    accessToken: import.meta.env.VITE_ACCESS_TOKEN,
+  });
 
-export const loader = async () => {
-  return null;
+  const res = await client.getEntry(id);
+  const data = res.fields;
+  return {
+    data,
+  };
 };
 const Profile = () => {
   return (
