@@ -3,6 +3,7 @@ import decore from "../../assets/decore.png";
 import decore2 from "../../assets/decore2.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link, useLoaderData } from "react-router-dom";
+import ImageWithBlurHash from "../global/ImageWithBlurHash";
 
 const BestProperty = () => {
   const { data }: any = useLoaderData();
@@ -46,6 +47,7 @@ const BestProperty = () => {
             className="h-full w-[100%] objecst-conver rounded-md"
             src={image}
             alt="villa"
+            loading="lazy"
           />
         </Link>
       </div>

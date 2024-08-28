@@ -66,7 +66,7 @@ const PropertyCardList = ({
         <div className="mt-2">
           <h3 className="tracking-wide mb-2">more image</h3>
           <div className="flex gap-2">
-            {images.map((item: any, index: number) => {
+            {images.map((item: any) => {
               const image = item.fields.file.url;
               return (
                 <button
