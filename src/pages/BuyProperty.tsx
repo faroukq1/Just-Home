@@ -26,8 +26,8 @@ export const loader: LoaderFunction = async ({ params }) => {
 const BuyProperty = () => {
   const { page } = useParams();
   const currentPage = parseInt(page as string) || 0;
-  const { totalItem }: any = useLoaderData();
-  const maxPaginationNumber = Math.ceil(totalItem / 6);
+  const { totalItem, data }: any = useLoaderData();
+  const maxPaginationNumber = Math.ceil(totalItem / data.length);
   const nextPage =
     currentPage < maxPaginationNumber ? currentPage + 1 : maxPaginationNumber;
   const previousPage = currentPage > 1 ? currentPage - 1 : 1;
