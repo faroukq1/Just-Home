@@ -27,12 +27,12 @@ const PropertyCardList = ({
     setCurrentImage(image);
   };
   return (
-    <div className="grid gap-10 md:grid-cols-2 p-2 shadow-md bg-neutral-50">
+    <div className="grid gap-10 md:grid-cols-2 p-2 shadow-md border rounded-md">
       <div className="flex flex-col gap-2 justify-center items-center">
         <img
           src={`https:${currentImage}`}
           alt="image"
-          className="max-h-[70%] w-[100%] h-[500px]  object-cover  rounded-md "
+          className="h-[300px] w-[600px] object-cover rounded-md"
           loading="lazy"
         />
         <Link
@@ -57,12 +57,10 @@ const PropertyCardList = ({
             450 sqft
           </span>
         </div>
-        <p className="text-sm leading-6 font-light text-neutral-600">
-          {description}
-        </p>
+        <p className="text-sm leading-6 font-light">{description}</p>
 
         <div className="mt-2">
-          <h3 className="tracking-wide text-neutral-500 mb-2">more image</h3>
+          <h3 className="tracking-wide mb-2">more image</h3>
           <div className="flex gap-2">
             {images.map((item: any, index: number) => {
               const image = item.fields.file.url;

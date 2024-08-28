@@ -14,7 +14,7 @@ const PropertyMarketPlace = () => {
       className="w-full overflow-auto max-h-[80vh]"
     >
       <div className="w-full h-fit py-6 px-2 flex justify-between">
-        <h1 className="text-neutral-700 font-medium tracking-wide">
+        <h1 className="font-medium tracking-wide">
           result : {data.length} property found{data.length >= 2 && "s"}
         </h1>
         <div className="flex items-center gap-5">

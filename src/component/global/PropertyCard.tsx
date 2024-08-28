@@ -34,11 +34,11 @@ const PropertyCard = ({
         />
       </figure>
       <div className="card-body">
-        <h1 className="flex justify-between gap-2 text-accent-content">
+        <h1 className="flex justify-between gap-2">
           {title}
           <span className="text-error">{convertPrice(price)}</span>
         </h1>
-        <p className="flex items-center gap-1 text-sm font-light text-accent-content">
+        <p className="flex items-center gap-1 text-sm font-light">
           <CiLocationOn className="text-xl" />
           {address}
         </p>
