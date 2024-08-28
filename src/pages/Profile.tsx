@@ -1,6 +1,8 @@
-import { LoaderFunction } from "react-router-dom";
-import { ProfileInformation } from "../component";
+import { LoaderFunction, useLoaderData } from "react-router-dom";
+import { FaCamera } from "react-icons/fa";
+import { EditInformation, ProfileInformation } from "../component";
 import { createClient } from "contentful";
+import { useState } from "react";
 export const loader: LoaderFunction = async ({ params }) => {
   const id = params.id as string;
   const client = createClient({
@@ -15,11 +17,30 @@ export const loader: LoaderFunction = async ({ params }) => {
   };
 };
 const Profile = () => {
+  const { data }: any = useLoaderData();
+  const image = data.profileimage.fields.file.url;
+  const [edit, setEdit] = useState<boolean>(false);
   return (
-    <div className="h-screen align-element flex gap-4 p-4">
-      <ProfileInformation />
-      <div className="p-4 flex-1 bg-neutral-content rounded-lg">
-        <h1>hello world</h1>
+    <div className="h-screen align-element gap-4 p-4">
+      <h1 className="text-3xl text-neutral font-bold tracking-wider mb-8">
+        {edit ? "Edit Profile" : "Profile"}
+      </h1>
+      <div className="flex gap-4 justify-center">
+        <div className="relative">
+          <img
+            src={`https:${image}`}
+            alt="profile image"
+            className="w-96 h-96 rounded-box"
+          />
+          <button className="absolute top-2 right-2 btn btn-sm btn-neutral">
+            <FaCamera />
+          </button>
+        </div>
+        {edit ? (
+          <EditInformation />
+        ) : (
+          <ProfileInformation edit={edit} setEdit={setEdit} />
+        )}
       </div>
     </div>
   );

@@ -1,29 +1,58 @@
-import image from "../../assets/profilepic.png";
-import { LiaUserEditSolid } from "react-icons/lia";
-
-const ProfileInformation = () => {
+import { useLoaderData } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import React, { useState } from "react";
+const ProfileInformation = ({
+  edit,
+  setEdit,
+}: {
+  edit: boolean;
+  setEdit: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const { data }: any = useLoaderData();
+  const { email, firstName, lastName, password, phoneNumber, username } = data;
+  const [showPass, setShowPass] = useState("password");
+  const togglePasswordVisibility = () =>
+    setShowPass((prev) => (prev === "text" ? "password" : "text"));
+  console.log(edit);
   return (
-    <div className="relative w-1/3 h-fit p-4 bg-neutral-content rounded-lg flex flex-col justify-center gap-4">
-      <div className="relative w-full grid place-items-center">
-        <img
-          src={image}
-          alt="profile picture"
-          className="rounded-full max-w-[300px] border border-black object-cover"
+    <div className="flex flex-col justify-between">
+      <div>
+        <h3 className="font-bold text-xl">User name</h3>
+        <p className="text-lg text-neutral-500">{username}</p>
+      </div>
+      <div>
+        <h3 className="font-bold text-xl">First Name</h3>
+        <p className="text-lg text-neutral-500">{firstName}</p>
+      </div>
+      <div>
+        <h3 className="font-bold text-xl">Last Name</h3>
+        <p className="text-lg text-neutral-500">{lastName}</p>
+      </div>
+      <div>
+        <h3 className="font-bold text-xl">email</h3>
+        <p className="text-lg text-neutral-500">{email}</p>
+      </div>
+      <div>
+        <h3 className="font-bold text-xl">Password</h3>
+        <input
+          type={showPass === "text" ? "text" : "password"}
+          disabled
+          value={password}
         />
-        <button className="absolute top-2 right-24 bg-neutral p-1 rounded-lg">
-          <LiaUserEditSolid className="text-xl text-white" />
+        <button
+          className="btn btn-sm btn-neutral"
+          onClick={togglePasswordVisibility}
+        >
+          <FaEye />
         </button>
       </div>
-      <div className="flex items-center gap-4 mt-4">
-        <p className="text-sm text-neutral-400">INFORMATION</p>
-        <div className="h-[1px] w-full bg-neutral-400"></div>
+      <div>
+        <h3 className="font-bold text-xl">Phone Number</h3>
+        <p className="text-lg text-neutral-500">{phoneNumber}</p>
       </div>
-      <div className="w-full p-4 flex flex-col gap-2 rounded-lg bg-base-200">
-        <h1>name : john doe</h1>
-        <h3>email : john@me.com</h3>
-        <h3>phone : +213 6555555555</h3>
-        <h3>address : 505 Historic Way, Charleston, SC</h3>
-      </div>
+      <button className="btn btn-neutral mt-4" onClick={() => setEdit(!edit)}>
+        Edit Profile
+      </button>
     </div>
   );
 };
