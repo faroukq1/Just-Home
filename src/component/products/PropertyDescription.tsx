@@ -3,15 +3,19 @@ import { LuBedDouble } from "react-icons/lu";
 import { FaBath } from "react-icons/fa6";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { useLoaderData } from "react-router-dom";
+import { convertPrice } from "../../util/helperFuntions";
 
 const PropertyDescription = () => {
   const { data }: any = useLoaderData();
-  const { title, address, description, features } = data.fields;
+  const { title, address, description, features, price } = data.fields;
   const { wifi, bathrooms, bedrooms, floor_area } = features;
   return (
     <div>
       <div className="my-6 flex flex-col gap-4">
-        <h1 className="text-4xl">{title}</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-4xl">{title}</h1>
+          <h3 className="text-3xl font-bold">{convertPrice(price)}</h3>
+        </div>
         <p className="text-lg text-neutral-500">{address}</p>
       </div>
       <div className="mb-4 flex flex-col gap-2">
