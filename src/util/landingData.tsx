@@ -24,7 +24,28 @@ import articlevilla from "../assets/articlevilla.png";
 import chair from "../assets/chair.png";
 import villatree from "../assets/villatree.png";
 
-export const navlinks: string[] = ["Properties", "Blog", "Contact", "About"];
+export const navlinks: { id: number; name: string; params: number | null }[] = [
+  {
+    id: 1123,
+    name: "Properties",
+    params: 1,
+  },
+  {
+    id: 13232,
+    name: "blog",
+    params: null,
+  },
+  {
+    id: 34241,
+    name: "Contact",
+    params: null,
+  },
+  {
+    id: 167878,
+    name: "About",
+    params: null,
+  },
+];
 
 export const articleList: articleListType[] = [
   {

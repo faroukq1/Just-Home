@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         loader: landingLoader,
       },
       {
-        path: "/properties",
+        path: "/properties/:page",
         element: <BuyProperty />,
         errorElement: <Erorr />,
         loader: propertiesLoader,

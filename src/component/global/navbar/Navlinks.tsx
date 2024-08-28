@@ -13,14 +13,14 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
           tabIndex={0}
           className="dropdown-content menu bg-slate-200 rounded-box z-[1] p-2 mt-4 shadow w-52"
         >
-          {navlinks.map((item, index) => {
+          {navlinks.map(({ id, name, params }) => {
             return (
               <Link
                 className="p-3 mx-4 border-b border-b-slate-300 rounded-sm"
-                to={item.toLocaleUpperCase()}
-                key={index}
+                to={`${name.toLocaleLowerCase()}${params ? "/" + params : ""}`}
+                key={id}
               >
-                {item}
+                {name}
               </Link>
             );
           })}
@@ -30,14 +30,14 @@ const Navlinks = ({ dropdown }: { dropdown?: boolean }) => {
   }
   return (
     <ul className="hidden md:flex gap-3 items-center">
-      {navlinks.map((item, index) => {
+      {navlinks.map(({ id, name, params }) => {
         return (
           <Link
-            to={item.toLocaleLowerCase()}
-            key={index}
+            to={`${name.toLocaleLowerCase()}${params ? "/" + params : ""}`}
+            key={id}
             className="btn btn-ghost hover:bg-neutral-800 text-white btn-sm text-xs font-normal"
           >
-            {item}
+            {name}
           </Link>
         );
       })}
