@@ -5,8 +5,8 @@ import SmallCard from "./SmallCard";
 const ChooseUs = () => {
   return (
     <div
-      style={{ backgroundColor: "#E7C873" }}
-      className="min-h-[50vh] rounded-lg mx-4 flex flex-col justify-evenly items-center"
+      // style={{ backgroundColor: "#E7C873" }}
+      className="bg-neutral min-h-[50vh] rounded-lg mx-4 flex flex-col justify-evenly items-center"
     >
       <PrintTitle
         title="why choose us"

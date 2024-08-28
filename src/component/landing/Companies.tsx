@@ -13,7 +13,7 @@ const Companies = () => {
               key={index}
               src={company}
               alt="company"
-              className=" object-contain w-40 h-40 sm:w-20 sm:h-20"
+              className="object-contain w-40 h-40 sm:w-20 sm:h-20"
             />
           );
         })}
