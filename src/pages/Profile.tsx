@@ -22,17 +22,20 @@ const Profile = () => {
   const [edit, setEdit] = useState<boolean>(false);
   return (
     <div className="h-screen align-element gap-4 p-4">
-      <h1 className="text-3xl text-neutral font-bold tracking-wider mb-8">
+      <h1 className="text-3xl text-neutral font-bold tracking-wider mb-8 flex items-center gap-4">
+        <span
+          className={`btn ${edit ? "btn-secondary" : "btn-neutral"} btn-sm`}
+        ></span>
         {edit ? "Edit Profile" : "Profile"}
       </h1>
-      <div className="flex gap-4 justify-center">
-        <div className="relative">
+      <div className="flex gap-6 justify-center">
+        <div className="relative grid place-items-center">
           <img
             src={`https:${image}`}
             alt="profile image"
             className="w-96 h-96 rounded-box"
           />
-          <button className="absolute top-2 right-2 btn btn-sm btn-neutral">
+          <button className="absolute top-5 right-5 btn btn-sm btn-neutral">
             <FaCamera />
           </button>
         </div>
