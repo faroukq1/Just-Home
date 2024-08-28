@@ -9,10 +9,7 @@ const PropertyMarketPlace = () => {
   const [view, setView] = useState("grid");
   const { data }: any = useLoaderData();
   return (
-    <div
-      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      className="w-full overflow-auto max-h-[80vh]"
-    >
+    <div className="w-full">
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="font-medium tracking-wide">
           result : {data.length} property found{data.length >= 2 && "s"}
