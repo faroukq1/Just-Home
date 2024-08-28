@@ -26,8 +26,8 @@ export const loader: LoaderFunction = async ({ params }) => {
 const BuyProperty = () => {
   const { page } = useParams();
   const currentPage = parseInt(page as string) || 0;
-  const { totalItem, data }: any = useLoaderData();
-  const maxPaginationNumber = Math.ceil(totalItem / data.length);
+  const { totalItem }: any = useLoaderData();
+  const maxPaginationNumber = Math.ceil(totalItem / 6);
   const nextPage =
     currentPage < maxPaginationNumber ? currentPage + 1 : maxPaginationNumber;
   const previousPage = currentPage > 1 ? currentPage - 1 : 1;
@@ -47,7 +47,7 @@ const BuyProperty = () => {
         >
           Previous page
         </Link>
-        <button className="join-item btn" disabled>
+        <button className="join-item btn btn-neutral pointer-events-none">
           {currentPage}
         </button>
         <Link

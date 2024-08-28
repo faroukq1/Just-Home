@@ -6,8 +6,18 @@ import PropertyCardList from "../global/PropertyCardList";
 import { useLoaderData } from "react-router-dom";
 
 const PropertyMarketPlace = () => {
-  const [view, setView] = useState("grid");
   const { data }: any = useLoaderData();
+  const currentView = localStorage.getItem("view") || "grid";
+  const [view, setView] = useState(currentView);
+  const changeView = () => {
+    if (view === "grid") {
+      localStorage.setItem("view", "list");
+      setView("list");
+      return;
+    }
+    localStorage.setItem("view", "grid");
+    setView("grid");
+  };
   return (
     <div className="w-full">
       <div className="w-full h-fit py-6 px-2 flex justify-between">
@@ -16,7 +26,7 @@ const PropertyMarketPlace = () => {
         </h1>
         <div className="flex items-center gap-5">
           <button
-            onClick={() => setView("grid")}
+            onClick={changeView}
             className={`btn ${
               view === "grid" ? "btn-neutral" : "btn-ghost"
             } btn-sm btn-circle btn-active`}
@@ -25,7 +35,7 @@ const PropertyMarketPlace = () => {
           </button>
 
           <button
-            onClick={() => setView("list")}
+            onClick={changeView}
             className={`btn btn-sm ${
               view === "list" ? "btn-neutral" : "btn-ghost"
             } btn-circle`}
