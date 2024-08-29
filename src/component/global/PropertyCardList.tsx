@@ -38,7 +38,7 @@ const PropertyCardList = ({
           height={350}
         />
         <Link
-          className="text-white w-full btn btn-success"
+          className="text-white w-full btn btn-neutral"
           to={`/property/${id}`}
         >
           Book Now

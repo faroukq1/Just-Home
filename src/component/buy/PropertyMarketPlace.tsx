@@ -42,9 +42,6 @@ const PropertyMarketPlace = () => {
           >
             <FaThList />
           </button>
-          <select className="select select-bordered select-sm select-neutral w-full">
-            <option>Popular</option>
-          </select>
         </div>
       </div>
       <div className="flex flex-wrap justify-center 2xl:justify-start items-center gap-4">

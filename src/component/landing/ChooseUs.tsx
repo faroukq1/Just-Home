@@ -4,7 +4,7 @@ import SmallCard from "./SmallCard";
 
 const ChooseUs = () => {
   return (
-    <div className="bg-neutral-content min-h-[50vh] rounded-lg mx-4 flex flex-col justify-evenly items-center">
+    <div className="border-2 shadow-sm min-h-[50vh] rounded-lg mx-4 flex flex-col justify-evenly items-center">
       <PrintTitle
         title="why choose us"
         subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, delectus."

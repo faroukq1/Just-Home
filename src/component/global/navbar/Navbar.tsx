@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import Navlinks from "./Navlinks";
 import image from "../../../assets/profilepic.png";
+import DarkModeToggle from "./DarkModeToggle";
 const Navbar = () => {
   return (
-    <nav className="z-10 py-2 px-2 sm:px-16 lg:px-20 flex gap-2 justify-between items-center bg-neutral w-full shadow ">
+    <nav className="fixed z-10 py-2 px-2 sm:px-16 lg:px-20 flex gap-2 justify-between items-center bg-neutral w-full shadow ">
       <Link
         to="/"
         className="flex items-center gap-2 btn btn-neutral btn-outline border-none"
@@ -39,6 +40,9 @@ const Navbar = () => {
               <Link to="/add" className="bg-neutral-content">
                 Add Property
               </Link>
+            </li>
+            <li>
+              <DarkModeToggle />
             </li>
             <li>
               <Link to="/" className="bg-error text-white">
