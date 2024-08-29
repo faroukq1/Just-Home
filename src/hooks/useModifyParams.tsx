@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const useModifyParams = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
+  // change url based on array of ids (queries)
   const modifyParams = (
     newParams: Record<string, string | number | (string | number)[] | null>
   ) => {
@@ -27,7 +30,21 @@ const useModifyParams = () => {
     setSearchParams(updatedParams);
   };
 
-  return { searchParams, modifyParams };
+  // handle categories changes
+  const addNewCategory = (category: string, checked: boolean) => {
+    if (checked) {
+      setSelectedCategories([...selectedCategories, category]);
+      return;
+    }
+    const newCategoriesList = selectedCategories.filter((c) => c != category);
+    setSelectedCategories(newCategoriesList);
+  };
+  const filterCategories = () => {
+    const category = selectedCategories;
+    modifyParams({ category });
+  };
+
+  return { searchParams, modifyParams, addNewCategory, filterCategories };
 };
 
 export default useModifyParams;

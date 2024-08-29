@@ -19,13 +19,14 @@ export const loader: LoaderFunction = async ({ params, request }) => {
   const fetchCategories = await client.getEntries({
     content_type: "category",
   });
-
   // fetching properties
   const fetchProperties = await client.getEntries({
     content_type: "justHomeContent",
     limit: 6,
     skip: nextItems * 6,
-    "fields.propertyCategory.sys.id[in]": selectedCategories.join(","),
+    ...(selectedCategories.length > 0 && {
+      "fields.propertyCategory.sys.id[in]": selectedCategories.join(","),
+    }),
   });
 
   const categories = fetchCategories.items;
