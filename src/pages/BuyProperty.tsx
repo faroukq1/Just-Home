@@ -15,6 +15,8 @@ export const loader: LoaderFunction = async ({ params, request }) => {
   const nextItems = parseInt(params.page as string) - 1;
   const url = new URL(request.url);
   const selectedCategories = url.searchParams.getAll("category");
+  const minPrice = url.searchParams.getAll("minPrice");
+  console.log(minPrice);
   // fetching categories
   const fetchCategories = await client.getEntries({
     content_type: "category",
@@ -27,12 +29,14 @@ export const loader: LoaderFunction = async ({ params, request }) => {
     ...(selectedCategories.length > 0 && {
       "fields.propertyCategory.sys.id[in]": selectedCategories.join(","),
     }),
+    ...(minPrice.length > 0 && {
+      "fields.price[gte]": minPrice,
+    }),
   });
 
   const categories = fetchCategories.items;
   const totalItem = fetchProperties.total;
   const data = fetchProperties.items;
-
   return { data, totalItem, categories };
 };
 

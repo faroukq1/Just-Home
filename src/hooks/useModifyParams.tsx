@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 const useModifyParams = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-
+  const priceRange = useState(100_000 * 2);
   // change url based on array of ids (queries)
   const modifyParams = (
     newParams: Record<string, string | number | (string | number)[] | null>
@@ -39,10 +39,16 @@ const useModifyParams = () => {
     }
   };
   const filterCategories = () => {
-    modifyParams({ category: selectedCategories });
+    modifyParams({ category: selectedCategories, minPrice: priceRange[0] });
   };
 
-  return { searchParams, modifyParams, addNewCategory, filterCategories };
+  return {
+    searchParams,
+    modifyParams,
+    addNewCategory,
+    filterCategories,
+    priceRange,
+  };
 };
 
 export default useModifyParams;

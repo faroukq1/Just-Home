@@ -6,12 +6,12 @@ import {
 import useModifyParams from "../../hooks/useModifyParams";
 
 const BuyFilter = () => {
-  const { addNewCategory, filterCategories } = useModifyParams();
+  const { addNewCategory, filterCategories, priceRange } = useModifyParams();
   return (
     <aside className="py-2 hidden xl:block">
       <FilterHeader />
       <FilterCategory addNewCategory={addNewCategory} />
-      <FilterByPriceRange />
+      <FilterByPriceRange priceRange={priceRange} />
       <button
         onClick={filterCategories}
         className="mt-4 btn btn-neutral btn-wide text-white text-2xl font-normal tracking-wide capitalize"
