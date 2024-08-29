@@ -29,17 +29,15 @@ const Navbar = () => {
               <Link to="/profile">profile</Link>
             </li>
             <li>
-              <Link to="/">
+              <span>
                 language
                 <span className="w-full bg-slate-600 p-1 rounded-lg text-center text-white">
                   english
                 </span>
-              </Link>
+              </span>
             </li>
             <li>
-              <Link to="/add" className="bg-neutral-content">
-                Add Property
-              </Link>
+              <Link to="/add">Add Property</Link>
             </li>
             <li>
               <DarkModeToggle />
