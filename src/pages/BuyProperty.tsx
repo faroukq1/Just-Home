@@ -15,29 +15,17 @@ export const loader: LoaderFunction = async ({ params, request }) => {
   const nextItems = parseInt(params.page as string) - 1;
   const url = new URL(request.url);
   const selectedCategories = url.searchParams.getAll("category");
-
   // fetching categories
   const fetchCategories = await client.getEntries({
     content_type: "category",
   });
 
-  const categoryMap = new Map<string, string>();
-
-  fetchCategories.items.forEach((item: any) => {
-    const name = item.fields.name;
-    const id = item.sys.id;
-    categoryMap.set(name, id);
-  });
-
-  const selectedCategoriesById = selectedCategories.map((cat) =>
-    categoryMap.get(cat)
-  );
   // fetching properties
   const fetchProperties = await client.getEntries({
     content_type: "justHomeContent",
     limit: 6,
     skip: nextItems * 6,
-    "fields.propertyCategory.sys.id[in]": selectedCategoriesById.join(","),
+    "fields.propertyCategory.sys.id[in]": selectedCategories.join(","),
   });
 
   const categories = fetchCategories.items;
