@@ -1,21 +1,8 @@
-import { LoaderFunction, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { FaCamera } from "react-icons/fa";
 import { EditInformation, ProfileInformation } from "../component";
-import { createClient } from "contentful";
 import { useState } from "react";
-export const loader: LoaderFunction = async ({ params }) => {
-  const id = params.id as string;
-  const client = createClient({
-    space: import.meta.env.VITE_SPACE_TOKEN,
-    accessToken: import.meta.env.VITE_ACCESS_TOKEN,
-  });
 
-  const res = await client.getEntry(id);
-  const data = res.fields;
-  return {
-    data,
-  };
-};
 const Profile = () => {
   const { data }: any = useLoaderData();
   const image = data.profileimage.fields.file.url;

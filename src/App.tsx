@@ -12,10 +12,12 @@ import {
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
-import { loader as landingLoader } from "./pages/Landingpage";
-import { loader as propertiesLoader } from "./pages/BuyProperty";
-import { loader as propertyInfoLoader } from "./pages/PropertyInfo";
-import { loader as profileLoader } from "./pages/Profile";
+
+// import loader
+import { ProfileLoader } from "./loaders/ProfileLoader";
+import { LandingLoader } from "./loaders/LandingLoader";
+import { BuyPropertyLoader } from "./loaders/BuyPropertyLoader";
+import { PropertyInformationLoader } from "./loaders/PropertyInformationLoader";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,19 +28,19 @@ const router = createBrowserRouter([
         index: true,
         element: <Landingpage />,
         errorElement: <Erorr />,
-        loader: landingLoader,
+        loader: LandingLoader,
       },
       {
         path: "/properties/:page",
         element: <BuyProperty />,
         errorElement: <Erorr />,
-        loader: propertiesLoader,
+        loader: BuyPropertyLoader,
       },
       {
         path: "/property/:id",
         element: <PropertyInfo />,
         errorElement: <Erorr />,
-        loader: propertyInfoLoader,
+        loader: PropertyInformationLoader,
       },
       {
         path: "contact",
@@ -69,7 +71,7 @@ const router = createBrowserRouter([
         path: "profile/:id",
         element: <Profile />,
         errorElement: <Erorr />,
-        loader: profileLoader,
+        loader: ProfileLoader,
       },
     ],
   },
