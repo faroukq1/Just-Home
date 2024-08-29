@@ -18,7 +18,7 @@ const BuySearchBar = () => {
       </div>
       <div className="w-full flex justify-between xl:w-fit items-center gap-2">
         <button
-          type="submit"
+          type="button"
           className="w-full btn btn-neutral capitalize text-white"
         >
           search

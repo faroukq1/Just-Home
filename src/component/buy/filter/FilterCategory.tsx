@@ -1,9 +1,7 @@
 import { useLoaderData } from "react-router-dom";
-import useModifyParams from "../../../hooks/useModifyParams";
 
-const FilterCategory = () => {
+const FilterCategory = ({ addNewCategory }: any) => {
   const { categories }: any = useLoaderData();
-  const { addNewCategory, filterCategories } = useModifyParams();
   return (
     <div className="my-4">
       <h3 className="text-lg font-semibold">Categories</h3>
@@ -23,9 +21,6 @@ const FilterCategory = () => {
           </div>
         );
       })}
-      <button className="btn btn-neutral btn-wide" onClick={filterCategories}>
-        filter categories
-      </button>
     </div>
   );
 };

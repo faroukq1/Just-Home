@@ -30,18 +30,16 @@ const useModifyParams = () => {
     setSearchParams(updatedParams);
   };
 
-  // handle categories changes
+  // handle categories
   const addNewCategory = (category: string, checked: boolean) => {
-    if (checked) {
-      setSelectedCategories([...selectedCategories, category]);
-      return;
+    if (checked) setSelectedCategories([...selectedCategories, category]);
+    else {
+      const newCategoriesList = selectedCategories.filter((c) => c != category);
+      setSelectedCategories(newCategoriesList);
     }
-    const newCategoriesList = selectedCategories.filter((c) => c != category);
-    setSelectedCategories(newCategoriesList);
   };
   const filterCategories = () => {
-    const category = selectedCategories;
-    modifyParams({ category });
+    modifyParams({ category: selectedCategories });
   };
 
   return { searchParams, modifyParams, addNewCategory, filterCategories };
