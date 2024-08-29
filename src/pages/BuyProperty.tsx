@@ -7,23 +7,43 @@ import {
 import { BuyFilter, BuySearchBar, PropertyMarketPlace } from "../component";
 import { createClient } from "contentful";
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = async ({ params, request }) => {
   const client = createClient({
     space: import.meta.env.VITE_SPACE_TOKEN,
     accessToken: import.meta.env.VITE_ACCESS_TOKEN,
   });
   const nextItems = parseInt(params.page as string) - 1;
+  const url = new URL(request.url);
+  const selectedCategories = url.searchParams.getAll("category");
+
+  // fetching categories
+  const fetchCategories = await client.getEntries({
+    content_type: "category",
+  });
+
+  const categoryMap = new Map<string, string>();
+
+  fetchCategories.items.forEach((item: any) => {
+    const name = item.fields.name;
+    const id = item.sys.id;
+    categoryMap.set(name, id);
+  });
+
+  const selectedCategoriesById = selectedCategories.map((cat) =>
+    categoryMap.get(cat)
+  );
+  // fetching properties
   const fetchProperties = await client.getEntries({
     content_type: "justHomeContent",
     limit: 6,
     skip: nextItems * 6,
+    "fields.propertyCategory.sys.id[in]": selectedCategoriesById.join(","),
   });
-  const fetchCategories = await client.getEntries({
-    content_type: "category",
-  });
+
   const categories = fetchCategories.items;
   const totalItem = fetchProperties.total;
   const data = fetchProperties.items;
+
   return { data, totalItem, categories };
 };
 
