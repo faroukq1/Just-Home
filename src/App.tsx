@@ -8,6 +8,7 @@ import {
   Contact,
   Homelayout,
   Landingpage,
+  Paymentpage,
   Profile,
   PropertyInfo,
 } from "./pages";
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
       {
         path: "add",
         element: <AddProperty />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "payment/:id",
+        element: <Paymentpage />,
         errorElement: <Erorr />,
       },
       {

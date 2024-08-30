@@ -8,3 +8,4 @@ export { default as About } from "./About";
 export { default as Article } from "./Article";
 export { default as AddProperty } from "./AddProperty";
 export { default as Profile } from "./Profile";
+export { default as Paymentpage } from "./Paymentpage";
