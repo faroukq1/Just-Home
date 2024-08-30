@@ -38,7 +38,12 @@ const PropertyPayment = () => {
             </span>
           </h3>
         </div>
-        <button className="btn btn-neutral btn-wide">Book Now</button>
+        <Link
+          to={`/payment/${data.sys.id}`}
+          className="btn btn-neutral btn-wide"
+        >
+          Book Now
+        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import decore from "../../assets/decore.png";
 import decore2 from "../../assets/decore2.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link, useLoaderData } from "react-router-dom";
-import ImageWithBlurHash from "../global/ImageWithBlurHash";
 
 const BestProperty = () => {
   const { data }: any = useLoaderData();

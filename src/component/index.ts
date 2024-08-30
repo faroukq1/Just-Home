@@ -42,3 +42,4 @@ export { default as ImageWithBlurHash } from "./global/ImageWithBlurHash";
 export { default as FilterCategory } from "./buy/filter/FilterCategory";
 export { default as FilterByPriceRange } from "./buy/filter/FilterByPriceRange";
 export { default as DarkModeToggle } from "./global/navbar/DarkModeToggle";
+export { default as Notice } from "./payment/Notice";
