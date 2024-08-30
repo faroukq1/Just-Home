@@ -28,6 +28,18 @@ const Paymentpage = () => {
         We provide everything needed for the transaction, ensuring a smooth process for both parties. With our professional setting, we help make property deals happen quickly and efficiently."
         reverse
       />
+
+      <div className="flex justify-between">
+        <h3>
+          <span className="btn btn-neutral mr-4">Address</span> 128 Maple
+          Street, Suite 204, New Haven, CT 06510
+        </h3>
+        <h3>
+          <span className="btn btn-neutral mr-4">Time</span> Monday - Friday,
+          9:00 AM - 6:00 PM
+        </h3>
+        <button className="btn btn-error text-white">Accept Offer</button>
+      </div>
     </div>
   );
 };
