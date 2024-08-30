@@ -20,6 +20,7 @@ import { LandingLoader } from "./loaders/LandingLoader";
 import { BuyPropertyLoader } from "./loaders/BuyPropertyLoader";
 import { PropertyInformationLoader } from "./loaders/PropertyInformationLoader";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const router = createBrowserRouter([
   {
     path: "/",
