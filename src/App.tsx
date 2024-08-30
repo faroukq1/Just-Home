@@ -12,8 +12,7 @@ import {
   Profile,
   PropertyInfo,
 } from "./pages";
-import { Erorr, ScrollToTop } from "./component";
-import "react-toastify/dist/ReactToastify.css";
+import { Erorr } from "./component";
 
 // import loader
 import { ProfileLoader } from "./loaders/ProfileLoader";
@@ -88,7 +87,6 @@ const App = (): JSX.Element | null => {
   return (
     <>
       <RouterProvider router={router} />
-      <ScrollToTop />
       <ToastContainer />
     </>
   );
