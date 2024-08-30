@@ -1,7 +1,14 @@
 import { Notice } from "../component";
 import image from "../assets/decore2.png";
 import meeting from "../assets/meeting.jpg";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const Paymentpage = () => {
+  const navigation = useNavigate();
+  const handleAccept = () => {
+    toast.success("Offer has been sended to the client");
+    navigation("/properties/1");
+  };
   return (
     <div className="py-20 min-h-screen align-element grid gap-8">
       <Notice
@@ -38,7 +45,9 @@ const Paymentpage = () => {
           <span className="btn btn-neutral mr-4">Time</span> Monday - Friday,
           9:00 AM - 6:00 PM
         </h3>
-        <button className="btn btn-error text-white">Accept Offer</button>
+        <button onClick={handleAccept} className="btn btn-error text-neutral">
+          Accept Offer
+        </button>
       </div>
     </div>
   );
