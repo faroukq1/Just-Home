@@ -38,12 +38,59 @@ const Paymentpage = () => {
 
       <div className="flex justify-between">
         <h3>
-          <span className="btn btn-neutral mr-4">Address</span> 128 Maple
-          Street, Suite 204, New Haven, CT 06510
+          <span className="btn btn-neutral mr-4 pointer-events-none">
+            Address
+          </span>
+          128 Maple Street, Suite 204, New Haven, CT 06510
         </h3>
         <h3>
-          <span className="btn btn-neutral mr-4">Time</span> Monday - Friday,
-          9:00 AM - 6:00 PM
+          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
+          Monday - Friday, 9:00 AM - 6:00 PM
+        </h3>
+        <button onClick={handleAccept} className="btn btn-error text-neutral">
+          Accept Offer
+        </button>
+      </div>
+      <div className="flex justify-between">
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">
+            Address
+          </span>
+          128 Maple Street, Suite 204, New Haven, CT 06510
+        </h3>
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
+          Monday - Friday, 9:00 AM - 6:00 PM
+        </h3>
+        <button onClick={handleAccept} className="btn btn-error text-neutral">
+          Accept Offer
+        </button>
+      </div>
+      <div className="flex justify-between">
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">
+            Address
+          </span>
+          128 Maple Street, Suite 204, New Haven, CT 06510
+        </h3>
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
+          Monday - Friday, 9:00 AM - 6:00 PM
+        </h3>
+        <button onClick={handleAccept} className="btn btn-error text-neutral">
+          Accept Offer
+        </button>
+      </div>
+      <div className="flex justify-between">
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">
+            Address
+          </span>
+          128 Maple Street, Suite 204, New Haven, CT 06510
+        </h3>
+        <h3>
+          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
+          Monday - Friday, 9:00 AM - 6:00 PM
         </h3>
         <button onClick={handleAccept} className="btn btn-error text-neutral">
           Accept Offer
