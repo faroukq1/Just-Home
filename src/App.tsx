@@ -3,7 +3,6 @@ import {
   About,
   AddProperty,
   Article,
-  Blog,
   BuyProperty,
   Contact,
   Homelayout,
