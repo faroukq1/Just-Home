@@ -19,58 +19,68 @@ const PropertyPerCity = () => {
         title="find properties in these cities"
         subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, accusamus?"
       />
-      <div className="flex flex-col justify-center items-center lg:flex-row gap-2">
-        <div className="flex flex-wrap flex-col sm:flex-nowrap">
-          <Link className="relative" to={`property/${img1.id}`}>
-            <img
-              className="w-full h-60 rounded-md object-cover"
-              src={img1.image}
-              alt="new york"
-            />
-          </Link>
-          <div className="flex flex-wrap sm:flex-nowrap gap-2 my-2">
-            <Link className="relative" to={`property/${img2.id}`}>
-              <img
-                className="w-full sm:w-60 rounded-md object-cover"
-                src={img2.image}
-                alt="sandiego"
-              />
-            </Link>
-            <Link className="relative" to={`property/${img3.id}`}>
-              <img
-                className="w-full sm:w-60 rounded-md object-cover"
-                src={img3.image}
-                alt="florida"
-              />
-            </Link>
-          </div>
-        </div>
 
-        <div className="flex flex-col gap-2 mb-2">
-          <div className="flex flex-wrap sm:flex-nowrap gap-2">
-            <Link className="relative" to={`property/${img4.id}`}>
-              <img
-                className="w-full sm:w-60 rounded-md object-cover"
-                src={img4.image}
-                alt="losangeles"
-              />
-            </Link>
-            <Link className="relative" to={`property/${img5.id}`}>
-              <img
-                className="w-full sm:w-60 rounded-md object-cover h-full"
-                src={img5.image}
-                alt="miami"
-              />
-            </Link>
-          </div>
-          <Link className="relative" to={`property/${img6.id}`}>
-            <img
-              className="w-full h-60 rounded-md object-cover"
-              src={img6.image}
-              alt="chicago"
-            />
-          </Link>
-        </div>
+      <div className="grid grid-cols-7 grid-rows-6 gap-2">
+        <Link
+          to={`property/${img1.id}`}
+          className="col-start-6 col-end-8 row-start-1 row-end-4"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img1.image}
+            alt="new york"
+          />
+        </Link>
+        <Link
+          to={`property/${img2.id}`}
+          className="col-start-4 col-end-6 row-start-1 row-end-4"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img2.image}
+            alt="sandiego"
+          />
+        </Link>
+        <Link
+          to={`property/${img3.id}`}
+          className="col-start-3 col-end-5 row-start-4 row-end-7"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img3.image}
+            alt="florida"
+          />
+        </Link>
+        <Link
+          to={`property/${img4.id}`}
+          className="col-start-1 col-end-3 row-start-4 row-end-7"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img4.image}
+            alt="losangeles"
+          />
+        </Link>
+        <Link
+          to={`property/${img5.id}`}
+          className="col-start-1 col-end-4 row-start-1 row-end-4"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img5.image}
+            alt="miami"
+          />
+        </Link>
+        <Link
+          to={`property/${img6.id}`}
+          className="col-start-5 col-end-8 row-start-4 row-end-7"
+        >
+          <img
+            className="w-full h-full rounded-md object-cover"
+            src={img6.image}
+            alt="chicago"
+          />
+        </Link>
       </div>
     </div>
   );
