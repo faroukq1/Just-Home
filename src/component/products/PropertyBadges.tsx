@@ -1,3 +1,4 @@
+import { createClient } from "contentful-management";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaRegHeart, FaRegBookmark, FaHeart, FaBookmark } from "react-icons/fa";
@@ -5,6 +6,7 @@ import { FaRegHeart, FaRegBookmark, FaHeart, FaBookmark } from "react-icons/fa";
 const PropertyBadges = () => {
   const [favorate, setFavorate] = useState(false);
   const [bookMarked, setBookmarked] = useState(false);
+
   return (
     <div className="mt-8 flex flex-wrap justify-start md:justify-between gap-4 items-center">
       <div className="flex flex-wrap items-center gap-2">
@@ -26,7 +28,7 @@ const PropertyBadges = () => {
             return <FaStar key={index} className="text-xl text-warning" />;
           })}
         </div>
-        <button onClick={() => setFavorate(!favorate)}>
+        <button>
           {favorate ? (
             <FaHeart className="text-xl" />
           ) : (

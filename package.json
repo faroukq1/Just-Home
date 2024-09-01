@@ -14,6 +14,7 @@
     "blurhash": "^2.0.5",
     "compress.js": "^2.1.2",
     "contentful": "^10.15.0",
+    "contentful-management": "^11.33.0",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-blurhash": "^0.3.0",
