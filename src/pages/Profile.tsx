@@ -1,6 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
 import modernbuilding from "../assets/modernbuilding.png";
 import { PropertyCard } from "../component";
+import { IoMdSettings } from "react-icons/io";
+
 interface ProfileData {
   data: {
     firstName: string;
@@ -12,14 +14,22 @@ const Profile = () => {
   const { firstName, favorateProperties }: any = data;
   return (
     <div className="min-h-screen py-20 align-element">
-      <div>
-        <h3 className="mb-2 text-3xl font-semibold tracking-wider">
-          Good Morning,
-          <span className="text-red-400"> Welcome {firstName}</span>
-        </h3>
-        <p className="text-neutral-400 font-light tracking-wider">
-          Find out the value of your house and follow it over time.
-        </p>
+      <div className="flex justify-between">
+        <div className="flex flex-col justify-around">
+          <h3 className="text-3xl font-semibold tracking-wider">
+            Good Morning,
+            <span className="text-red-400"> Welcome {firstName}</span>
+          </h3>
+          <p className="text-neutral-400 font-light tracking-wider">
+            Find out the value of your house and follow it over time.
+          </p>
+        </div>
+        <div className="grid gap-2">
+          <h3 className="text-2xl font-semibold">Setting</h3>
+          <button className="btn btn-error">
+            <IoMdSettings className="text-white text-3xl" />
+          </button>
+        </div>
       </div>
 
       {/* Discount Banner */}
@@ -40,14 +50,18 @@ const Profile = () => {
         </div>
       </div>
 
+      <div className="mt-8 p-10 rounded-md bg-base-200">
+        <h3 className="text-3xl font-semibold tracking-wider">Your meeting</h3>
+      </div>
       {/* Favorate properties */}
-      <div className="mt-8 p-8 rounded-lg bg-base-200">
-        <h1 className="text-3xl font-semibold tracking-wider">
+      <div className="mt-8 p-10 rounded-lg bg-base-200">
+        <h1 className="text-3xl font-semibold tracking-wider flex items-center gap-4">
           Saved Properites
+          <button className="btn btn-error text-white">See All</button>
         </h1>
-        <div className="mt-8 w-full min-h-80 rounded-lg flex justify-center items-center gap-2">
+        <div className="mt-8 w-full min-h-80 rounded-lg flex items-center gap-4">
           {favorateProperties.length ? (
-            favorateProperties.map((item: any) => {
+            favorateProperties.slice(0, 2).map((item: any) => {
               const cardData = {
                 id: item.sys.id,
                 title: item.fields.title,

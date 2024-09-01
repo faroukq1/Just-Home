@@ -35,7 +35,7 @@ const ImageWithBlurHash: React.FC<ImageWithBlurHashType> = ({
       <img
         src={imageUrl}
         alt={alt}
-        className={`h-full rounded-md ${loaded ? "opacity-100" : "opacity-0"}`}
+        className={`h-96 rounded-md ${loaded ? "opacity-100" : "opacity-0"}`}
         onLoad={() => setLoader(true)}
       />
     </div>
