@@ -1,13 +1,4 @@
 import { GiSettingsKnobs } from "react-icons/gi";
-import BuyFilter from "./BuyFilter";
-import FilterHeader from "./filter/FilterHeader";
-import {
-  CustomInputNumber,
-  ProperyTypeFilter,
-  RentPeriod,
-  RoomFilter,
-} from "..";
-
 const SmallScreenFilter = () => {
   const displayModal = () => {
     const dialog = document.getElementById("modal_1") as HTMLDialogElement;
