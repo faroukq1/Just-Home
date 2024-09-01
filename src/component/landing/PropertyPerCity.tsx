@@ -22,9 +22,6 @@ const PropertyPerCity = () => {
       <div className="flex flex-col justify-center items-center lg:flex-row gap-2">
         <div className="flex flex-wrap flex-col sm:flex-nowrap">
           <Link className="relative" to={`property/${img1.id}`}>
-            <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm">
-              country
-            </h3>
             <img
               className="w-full h-60 rounded-md object-cover"
               src={img1.image}
@@ -33,9 +30,6 @@ const PropertyPerCity = () => {
           </Link>
           <div className="flex flex-wrap sm:flex-nowrap gap-2 my-2">
             <Link className="relative" to={`property/${img2.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                country
-              </h3>
               <img
                 className="w-full sm:w-60 rounded-md object-cover"
                 src={img2.image}
@@ -43,9 +37,6 @@ const PropertyPerCity = () => {
               />
             </Link>
             <Link className="relative" to={`property/${img3.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                country
-              </h3>
               <img
                 className="w-full sm:w-60 rounded-md object-cover"
                 src={img3.image}
@@ -58,9 +49,6 @@ const PropertyPerCity = () => {
         <div className="flex flex-col gap-2 mb-2">
           <div className="flex flex-wrap sm:flex-nowrap gap-2">
             <Link className="relative" to={`property/${img4.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                country
-              </h3>
               <img
                 className="w-full sm:w-60 rounded-md object-cover"
                 src={img4.image}
@@ -68,9 +56,6 @@ const PropertyPerCity = () => {
               />
             </Link>
             <Link className="relative" to={`property/${img5.id}`}>
-              <h3 className="btn btn-sm btn-neutral absolute top-4 left-4 z-20 font-bold text-sm ">
-                country
-              </h3>
               <img
                 className="w-full sm:w-60 rounded-md object-cover h-full"
                 src={img5.image}
@@ -79,9 +64,6 @@ const PropertyPerCity = () => {
             </Link>
           </div>
           <Link className="relative" to={`property/${img6.id}`}>
-            <h3 className="top-4 left-4 btn btn-sm btn-neutral absolute z-20 font-bold text-sm ">
-              country
-            </h3>
             <img
               className="w-full h-60 rounded-md object-cover"
               src={img6.image}
