@@ -31,11 +31,6 @@ export const navlinks: { id: number; name: string; params: number | null }[] = [
     params: 1,
   },
   {
-    id: 13232,
-    name: "blog",
-    params: null,
-  },
-  {
     id: 34241,
     name: "Contact",
     params: null,
