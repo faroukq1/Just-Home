@@ -19,7 +19,7 @@ const PropertyMarketPlace = () => {
     setView("grid");
   };
   return (
-    <div className="w-full max-h-[74vh] overflow-auto">
+    <div className="w-full max-h-[75vh] overflow-auto">
       <div className="w-full h-fit py-6 px-2 flex justify-between">
         <h1 className="font-medium tracking-wide">
           result : {data.length} property found{data.length >= 2 && "s"}
@@ -44,7 +44,7 @@ const PropertyMarketPlace = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center 2xl:justify-start items-center gap-4">
+      <div className="flex flex-wrap justify-center 2xl:justify-start items-center gap-2">
         {data.map((item: any) => {
           const cardData = {
             id: item.sys.id,
