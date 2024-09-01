@@ -32,7 +32,6 @@ export { default as PropertyPayment } from "./products/PropertyPayment";
 export { default as PropertyBadges } from "./products/PropertyBadges";
 export { default as PropertyDescription } from "./products/PropertyDescription";
 export { default as PropertyImages } from "./products/PropertyImages";
-export { default as ArticleBlogCard } from "./blog/ArticleBlogCard";
 export { default as CreateListingBar } from "./addProperty/CreateListingBar";
 export { default as PropertyForm } from "./addProperty/PropertyForm";
 export { default as PropertyPicutres } from "./addProperty/PropertyPicutres";
