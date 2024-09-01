@@ -13,8 +13,6 @@ const Paymentpage = () => {
   const date = data.fields.meetingDay.split("T");
   const time = date[1].split("+");
   const address = data.fields.address;
-
-  console.log(data);
   return (
     <div className="py-20 min-h-screen align-element grid gap-8">
       <Notice
