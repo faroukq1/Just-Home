@@ -10,7 +10,7 @@ const PropertyImages = () => {
         return (
           <div className="carousel-item" key={item.sys.id}>
             <img
-              src={`https:${item.fields.file.url}`}
+              src={`https:${item.fields?.file?.url}`}
               alt="carossel item"
               className="w-[800px] h-[600px] rounded-xl"
             />

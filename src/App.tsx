@@ -12,14 +12,15 @@ import {
   PropertyInfo,
 } from "./pages";
 import { Erorr } from "./component";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-// import loader
+// Import loaders
 import { ProfileLoader } from "./loaders/ProfileLoader";
 import { LandingLoader } from "./loaders/LandingLoader";
 import { BuyPropertyLoader } from "./loaders/BuyPropertyLoader";
 import { PropertyInformationLoader } from "./loaders/PropertyInformationLoader";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -79,6 +80,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 const App = (): JSX.Element | null => {
   return (
     <>

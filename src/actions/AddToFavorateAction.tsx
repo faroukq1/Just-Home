@@ -9,7 +9,6 @@ export const addFavoritePropertyToUser = async (propertyId: string) => {
     const environment = await space.getEnvironment("master");
 
     const userEntry = await environment.getEntry("120WEAYiWFxsGpe4odTvqA");
-    console.log(userEntry);
     if (!userEntry.fields.favorateProperties) {
       userEntry.fields.favorateProperties = {};
     }
