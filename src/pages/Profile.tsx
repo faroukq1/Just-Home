@@ -207,7 +207,7 @@ const Profile = () => {
           <button className="btn btn-error text-white">See All</button>
         </h1>
         <div className="mt-8 w-full min-h-80 rounded-lg flex items-center gap-4">
-          {favorateProperties.length ? (
+          {favorateProperties?.length ? (
             favorateProperties.slice(0, 2).map((item: any) => {
               const cardData = {
                 id: item.sys.id,
