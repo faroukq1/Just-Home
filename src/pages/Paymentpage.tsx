@@ -18,7 +18,7 @@ const Paymentpage = () => {
       <Notice
         image={image}
         heading="Notice"
-        paragraph="    Welcome to our property marketplace! Our website connects buyers and
+        paragraph="Welcome to our property marketplace! Our website connects buyers and
           sellers, making it easy to find and purchase your dream home or
           investment property. Here's how it works: sellers list their
           properties for sale on our platform, and buyers can browse through a
