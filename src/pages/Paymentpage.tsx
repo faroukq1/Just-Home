@@ -2,13 +2,17 @@ import { Notice } from "../component";
 import image from "../assets/decore2.png";
 import meeting from "../assets/meeting.jpg";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 const Paymentpage = () => {
   const navigation = useNavigate();
   const handleAccept = () => {
     toast.success("Offer has been sended to the client");
     navigation("/properties/1");
   };
+  const { data }: any = useLoaderData();
+  const date = data.fields.meetingDay.split("T");
+  const time = date[1].split("+");
+  const address = data.fields.address;
   return (
     <div className="py-20 min-h-screen align-element grid gap-8">
       <Notice
@@ -41,56 +45,15 @@ const Paymentpage = () => {
           <span className="btn btn-neutral mr-4 pointer-events-none">
             Address
           </span>
-          128 Maple Street, Suite 204, New Haven, CT 06510
+          {address}
         </h3>
-        <h3>
+        <h3 className="flex">
           <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
-          Monday - Friday, 9:00 AM - 6:00 PM
-        </h3>
-        <button onClick={handleAccept} className="btn btn-error text-neutral">
-          Accept Offer
-        </button>
-      </div>
-      <div className="flex justify-between">
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">
-            Address
-          </span>
-          128 Maple Street, Suite 204, New Haven, CT 06510
-        </h3>
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
-          Monday - Friday, 9:00 AM - 6:00 PM
-        </h3>
-        <button onClick={handleAccept} className="btn btn-error text-neutral">
-          Accept Offer
-        </button>
-      </div>
-      <div className="flex justify-between">
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">
-            Address
-          </span>
-          128 Maple Street, Suite 204, New Haven, CT 06510
-        </h3>
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
-          Monday - Friday, 9:00 AM - 6:00 PM
-        </h3>
-        <button onClick={handleAccept} className="btn btn-error text-neutral">
-          Accept Offer
-        </button>
-      </div>
-      <div className="flex justify-between">
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">
-            Address
-          </span>
-          128 Maple Street, Suite 204, New Haven, CT 06510
-        </h3>
-        <h3>
-          <span className="btn btn-neutral mr-4 pointer-events-none">Time</span>{" "}
-          Monday - Friday, 9:00 AM - 6:00 PM
+          <div className="grid grid-cols-2 gap-x-4">
+            <span>data : {date[0]}</span>
+            <span>time : {time[0]}</span>
+            <span>time zone : {time[1]}</span>
+          </div>
         </h3>
         <button onClick={handleAccept} className="btn btn-error text-neutral">
           Accept Offer

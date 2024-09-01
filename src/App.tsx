@@ -74,6 +74,7 @@ const router = createBrowserRouter([
         path: "payment/:id",
         element: <Paymentpage />,
         errorElement: <Erorr />,
+        loader: PropertyInformationLoader,
       },
       {
         path: "profile/:id",
