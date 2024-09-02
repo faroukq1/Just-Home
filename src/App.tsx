@@ -3,13 +3,16 @@ import {
   About,
   AddProperty,
   Article,
+  Auth,
   BuyProperty,
   Contact,
   Homelayout,
   Landingpage,
+  Loginpage,
   Paymentpage,
   Profile,
   PropertyInfo,
+  Registerpage,
 } from "./pages";
 import { Erorr } from "./component";
 import { ToastContainer } from "react-toastify";
@@ -76,6 +79,23 @@ const router = createBrowserRouter([
         element: <Profile />,
         errorElement: <Erorr />,
         loader: ProfileLoader,
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <Auth />,
+    errorElement: <Erorr />,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Loginpage />,
+        errorElement: <Erorr />,
+      },
+      {
+        path: "/auth/register",
+        element: <Registerpage />,
+        errorElement: <Erorr />,
       },
     ],
   },
