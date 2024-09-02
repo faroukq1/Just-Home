@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Loginpage = () => {
   return (
     <div className="h-full grid place-items-center">
-      <div className="flex flex-col">
+      <div className="flex flex-col w-[40%]">
         <h1 className="text-5xl text-secondary font-bold tracking-wide">
           Log In
         </h1>

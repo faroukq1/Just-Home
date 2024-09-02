@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
 import login from "../../assets/login.png";
 import logo from "../../assets/logo.png";
+import { DarkModeToggle } from "../../component";
 const Auth = () => {
   return (
-    <main className="flex h-screen">
-      <div className="flex-1 bg-base-300 flex flex-col gap-10 justify-center items-center">
+    <main className="relative flex h-screen">
+      <div className="absolute top-10 right-10">
+        <DarkModeToggle />
+      </div>
+      <div className="hidden lg:flex flex-1 bg-base-300 flex-col gap-10 justify-center items-center">
         <div className="grid place-items-center gap-2">
           <h1 className="flex items-center gap-2 text-4xl font-bold tracking-widest">
             <img
