@@ -1,14 +1,13 @@
-import { Outlet } from "react-router-dom";
 import login from "../../assets/login.png";
 import logo from "../../assets/logo.png";
 import { DarkModeToggle } from "../../component";
 const Auth = () => {
   return (
-    <main className="relative flex h-screen">
+    <main className="relative flex flex-col justify-center bg-base-300 h-screen">
       <div className="absolute top-10 right-10">
         <DarkModeToggle />
       </div>
-      <div className="hidden lg:flex flex-1 bg-base-300 flex-col gap-10 justify-center items-center">
+      <div className="flex flex-col gap-10 justify-center items-center">
         <div className="grid place-items-center gap-2">
           <h1 className="flex items-center gap-2 text-4xl font-bold tracking-widest">
             <img
@@ -22,9 +21,16 @@ const Auth = () => {
         </div>
         <img src={login} alt="login" className="rounded-box object-cover" />
       </div>
-      <section className="flex-1">
-        <Outlet />
-      </section>
+      <div className="mt-10 flex justify-center gap-32">
+        <div className="flex flex-col items-center">
+          <h3 className="text-4xl mb-4 text-secondary">Login</h3>
+          <button className="btn btn-secondary btn-wide">Log In</button>
+        </div>
+        <div className="flex flex-col items-center">
+          <h3 className="text-4xl mb-4 text-neutral-content">Register</h3>
+          <button className="btn btn-neutral btn-wide">Create account</button>
+        </div>
+      </div>
     </main>
   );
 };
