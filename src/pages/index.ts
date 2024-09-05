@@ -8,6 +8,4 @@ export { default as Article } from "./Article";
 export { default as AddProperty } from "./AddProperty";
 export { default as Profile } from "./Profile";
 export { default as Paymentpage } from "./Paymentpage";
-export { default as Loginpage } from "./auth/Loginpage";
-export { default as Registerpage } from "./auth/Registerpage";
 export { default as Auth } from "./auth/Auth";

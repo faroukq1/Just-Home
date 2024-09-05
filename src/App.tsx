@@ -8,11 +8,9 @@ import {
   Contact,
   Homelayout,
   Landingpage,
-  Loginpage,
   Paymentpage,
   Profile,
   PropertyInfo,
-  Registerpage,
 } from "./pages";
 import { Erorr } from "./component";
 import { ToastContainer } from "react-toastify";
