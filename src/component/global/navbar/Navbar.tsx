@@ -5,10 +5,13 @@ import defaultavatar from "../../../assets/defaultavatar.jpg";
 import DarkModeToggle from "./DarkModeToggle";
 import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
-  const { user, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, user, isAuthenticated } = useAuth0();
   const navigation = useNavigate();
   const handleLogin = () => {
     navigation("/auth");
+  };
+  const handleLogOut = () => {
+    loginWithRedirect();
   };
   return (
     <nav className="fixed z-10 py-2 px-2 sm:px-16 lg:px-20 flex gap-2 justify-between items-center bg-neutral w-full shadow ">
@@ -50,9 +53,9 @@ const Navbar = () => {
                 <DarkModeToggle />
               </li>
               <li>
-                <Link to="/" className="bg-error text-white">
+                <button onClick={handleLogOut} className="bg-error text-white">
                   logout
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
