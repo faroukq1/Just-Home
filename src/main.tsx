@@ -10,13 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <Auth0Provider
     domain={domain}
     clientId={clientId}
-    onRedirectCallback={(appState) => {
-      window.history.replaceState(
-        {},
-        document.title,
-        appState?.returnTo || window.location.pathname
-      );
-    }}
+    authorizationParams={{ redirect_uri: window.location.origin }}
   >
     <App />
   </Auth0Provider>
