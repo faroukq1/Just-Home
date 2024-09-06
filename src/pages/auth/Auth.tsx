@@ -1,7 +1,22 @@
+import { useAuth0, RedirectLoginOptions } from "@auth0/auth0-react";
 import login from "../../assets/login.png";
 import logo from "../../assets/logo.png";
 import { DarkModeToggle } from "../../component";
+
+interface CustomRedirectLoginOptions extends RedirectLoginOptions {
+  screen_hint?: string;
+}
+
 const Auth = () => {
+  const { loginWithRedirect } = useAuth0();
+  const handleLogin = () => {
+    loginWithRedirect();
+  };
+  const handleRegistration = () => {
+    loginWithRedirect({
+      screen_hint: "signup",
+    } as CustomRedirectLoginOptions);
+  };
   return (
     <main className="relative flex flex-col justify-center bg-base-300 h-screen">
       <div className="absolute top-10 right-10">
@@ -24,11 +39,18 @@ const Auth = () => {
       <div className="mt-10 flex justify-center gap-32">
         <div className="flex flex-col items-center">
           <h3 className="text-4xl mb-4 text-secondary">Login</h3>
-          <button className="btn btn-secondary btn-wide">Log In</button>
+          <button onClick={handleLogin} className="btn btn-secondary btn-wide">
+            Log In
+          </button>
         </div>
         <div className="flex flex-col items-center">
           <h3 className="text-4xl mb-4 text-neutral-content">Register</h3>
-          <button className="btn btn-neutral btn-wide">Create account</button>
+          <button
+            onClick={handleRegistration}
+            className="btn btn-neutral btn-wide"
+          >
+            Create account
+          </button>
         </div>
       </div>
     </main>
