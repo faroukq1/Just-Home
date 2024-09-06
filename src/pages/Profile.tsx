@@ -223,14 +223,14 @@ const Profile = () => {
               return <PropertyCard {...cardData} key={cardData.id} />;
             })
           ) : (
-            <>
+            <div className="flex flex-col items-center justify-center w-full gap-8">
               <p className="text-xl text-neutral font-medium">
                 Empty list You can check out market place.
               </p>
               <Link to="/properties/1" className="btn btn-error">
                 Market Place
               </Link>
-            </>
+            </div>
           )}
         </div>
       </div>
