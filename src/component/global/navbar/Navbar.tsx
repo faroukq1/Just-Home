@@ -5,13 +5,14 @@ import defaultavatar from "../../../assets/defaultavatar.jpg";
 import DarkModeToggle from "./DarkModeToggle";
 import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
-  const { loginWithRedirect, user, isAuthenticated } = useAuth0();
+  const { logout, user, isAuthenticated } = useAuth0();
   const navigation = useNavigate();
   const handleLogin = () => {
     navigation("/auth");
   };
   const handleLogOut = () => {
-    loginWithRedirect();
+    logout();
+    window.location.href = window.location.origin;
   };
   return (
     <nav className="fixed z-10 py-2 px-2 sm:px-16 lg:px-20 flex gap-2 justify-between items-center bg-neutral w-full shadow ">
