@@ -14,6 +14,7 @@ const Profile = () => {
             Good Morning,
             <span className="text-red-400"> Welcome {firstName}</span>
           </h3>
+
           <p className="text-neutral-400 font-light tracking-wider">
             Find out the value of your house and follow it over time.
           </p>
